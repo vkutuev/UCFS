@@ -90,7 +90,7 @@ fun saveSppf(name: String, sppf: Set<RangeSppfNode<Int>>) {
 }
 
 fun main() {
-    listOf("example_1_graph.dot").forEach { graphName ->
+    listOf("example_1_graph.dot", "example_2_graph.dot", "example_3_graph.dot").forEach { graphName ->
         val graph = readGraph(graphName)
         val grammar = PointsToAnBnGrammar()
         val gll = Gll.gll(grammar.rsm, graph)

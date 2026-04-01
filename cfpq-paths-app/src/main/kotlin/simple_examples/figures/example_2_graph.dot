@@ -1,0 +1,7 @@
+digraph {
+    start -> 0;
+    0 -> 1 [label = "a"];
+    1 -> 0 [label = "a"];
+    1 -> 1 [label = "b"];
+
+}
