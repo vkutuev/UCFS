@@ -1,11 +1,8 @@
 digraph {
     start -> 0;
-    start -> 1;
-    start -> 2;
     0 -> 1 [label = "a"];
     1 -> 2 [label = "a"];
-    2 -> 3 [label = "b"];
-    3 -> 2 [label = "b"];
-    2 -> 0 [label = "a"];
+    1 -> 2 [label = "b"];
+    2 -> 1 [label = "b"];
 
 }
