@@ -59,7 +59,7 @@ with $n$ letters $b$ (Examples: $ab$, $aabb$, $aaabbb$)
 
 **Input graph:**
 
-![Simple AnBn Graph / Finite Set Of Path](src/main/kotlin/simple_examples/figures/example_1_graph.dot.svg)
+![Simple AnBn Graph / Finite Set Of Path](figures/example_1_graph.dot.svg)
 
 Let's find *all* words that satisfy the language's grammar:
 
@@ -68,13 +68,13 @@ Let's find *all* words that satisfy the language's grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Finite Set Of Path / SPPF](src/main/kotlin/simple_examples/figures/example_1_graph_sppf.dot.svg)
+![Simple AnBn Graph / Finite Set Of Path / SPPF](figures/example_1_graph_sppf.dot.svg)
 
 **Example 2: Simple graph with an <ins>infinite</ins> number of paths #1**
 
 **Input graph:**
 
-![Simple AnBn Graph / Infinite Set Of Path #1](src/main/kotlin/simple_examples/figures/example_2_graph.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Path #1](figures/example_2_graph.dot.svg)
 
 Let's find *some* words that satisfy the language's grammar:
 
@@ -87,7 +87,7 @@ Let's find *some* words that satisfy the language's grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Infinite Set Of Path #1/ SPPF](src/main/kotlin/simple_examples/figures/example_2_graph_sppf.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Path #1/ SPPF](figures/example_2_graph_sppf.dot.svg)
 
 > [!TIP]
 > This example demonstrates that despite the infinite number of paths, the graph will be finite, as a limit is provided.
@@ -96,7 +96,7 @@ Let's find *some* words that satisfy the language's grammar:
 
 **Input graph:**
 
-![Simple AnBn Graph / Iinite Set Of Path #2](src/main/kotlin/simple_examples/figures/example_3_graph.dot.svg)
+![Simple AnBn Graph / Iinite Set Of Path #2](figures/example_3_graph.dot.svg)
 
 Let's find *some* words that satisfy the language's grammar:
 
