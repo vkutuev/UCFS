@@ -63,8 +63,8 @@ with $n$ letters $b$ (Examples: $ab$, $aabb$, $aaabbb$)
 
 Let's find *all* words that satisfy the language's grammar:
 
-* $ab$ (0 -$a$-> 1 -$b$-> 2)
-* $aabb$ (0 -$a$-> 1 -$a$-> 2 -$b$-> 1 -$b$-> 2)
+* $ab$ (0 -a-> 1 -b-> 2)
+* $aabb$ (0 -a-> 1 -a-> 2 -b-> 1 -b-> 2)
 
 **Resulting SPPF graph:**
 
@@ -78,8 +78,8 @@ Let's find *all* words that satisfy the language's grammar:
 
 Let's find *some* words that satisfy the language's grammar:
 
-* $ab$ (0 -$a$-> 1 -$b$-> 1)
-* $aaabbb$ (0 -$a$-> 1 -$a$-> 0 -$a$-> 1 -$b$-> 1 -$b$-> 1 -$b$-> 1)
+* $ab$ (0 -a-> 1 -b-> 1)
+* $aaabbb$ (0 -a-> 1 -a-> 0 -a-> 1 -b-> 1 -b-> 1 -b-> 1)
 * ...
 
 > [!NOTE]
@@ -100,9 +100,9 @@ Let's find *some* words that satisfy the language's grammar:
 
 Let's find *some* words that satisfy the language's grammar:
 
-* $ab$ (1 -$a$-> 2 -$b$-> 3)
-* $aabb$ (0 -$a$-> 1 -$a$-> 2 -$b$-> 3 -$b$-> 2)
-* $aaabbb$ (2 -$a$-> 0 -$a$-> 1 -$a$-> 2 -$b$-> 3 -$b$-> 2 -$b$-> 3)
+* $ab$ (1 -a-> 2 -b-> 3)
+* $aabb$ (0 -a-> 1 -a-> 2 -b-> 3 -b-> 2)
+* $aaabbb$ (2 -a-> 0 -a-> 1 -a-> 2 -b-> 3 -b-> 2 -b-> 3)
 * ...
 
 > [!NOTE]
