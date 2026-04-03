@@ -63,8 +63,8 @@ We can see how the starting non-terminal $S$ turns into either a concatenation o
 non-terminal and terminals $aSb$
 
 > [!NOTE]
-> To see this, look at the labels on the edges along the path from the starting non-terminal (green circle) to the final
-> terminal (red circle)
+> To confirm this, look at the labels along the edges of the path from the tree root (green circle) to the final leaf
+> (red circle).
 
 **Example 1: Simple graph with a <ins>finite</ins> set of paths**
 
