@@ -33,7 +33,7 @@ The name *LL* itself stands for
 
 Let's define the grammar of the language $a^n b^n$, which defines a set of words that start with $n$ letters $a$ and end
 with $n$ letters $b$ (Examples: $ab$, $aabb$, $aaabbb$)
-> [!TIP]
+> [!NOTE]
 > Please note that we can do this in several ways.
 >```kotlin
 >class PointsToAnBnGrammar : Grammar() {
@@ -54,6 +54,17 @@ with $n$ letters $b$ (Examples: $ab$, $aabb$, $aaabbb$)
 >    }
 >}
 >```
+
+Let's construct an RSM for the $a^n b^n$ grammar:
+
+![RSM for AnBn Grammar](figures/PointsToAnBnGrammarRsm.dot.svg)
+
+We can see how the starting non-terminal $S$ turns into either a concatenation of terminals $ab$ or a concatenation of a
+non-terminal and terminals $aSb$
+
+> [!NOTE]
+> To see this, look at the labels on the edges along the path from the starting non-terminal (green circle) to the final
+> terminal (red circle)
 
 **Example 1: Simple graph with a <ins>finite</ins> set of paths**
 
@@ -89,7 +100,7 @@ Let's find *some* words that satisfy the language's grammar:
 
 ![Simple AnBn Graph / Infinite Set Of Path #1/ SPPF](figures/example_2_graph_sppf.dot.svg)
 
-> [!TIP]
+> [!NOTE]
 > This example demonstrates that despite the infinite number of paths, the graph will be finite, as a limit is provided.
 
 **Example 3: Simple graph with an <ins>infinite</ins> set of paths #2**
