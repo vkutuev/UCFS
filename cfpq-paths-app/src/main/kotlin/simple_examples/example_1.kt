@@ -12,6 +12,7 @@ import org.ucfs.sppf.getSppfDot
 import org.ucfs.sppf.node.*
 import java.nio.file.Files
 import java.nio.file.Path
+import org.ucfs.rsm.writeRsmToDot
 
 class PointsToAnBnGrammar : Grammar() {
     val S by Nt().asStart()
@@ -93,6 +94,7 @@ fun main() {
     listOf("example_1_graph.dot", "example_2_graph.dot", "example_3_graph.dot").forEach { graphName ->
         val graph = readGraph(graphName)
         val grammar = PointsToAnBnGrammar()
+//        writeRsmToDot(grammar.rsm, "${grammar.name}Rsm")
         val gll = Gll.gll(grammar.rsm, graph)
         val sppf = gll.parse()
         saveSppf(graphName, sppf)
