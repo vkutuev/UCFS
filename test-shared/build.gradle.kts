@@ -1,5 +1,10 @@
 plugins {
     kotlin("jvm") version "1.9.20"
+    jacoco
+}
+
+jacoco{
+    toolVersion = "0.8.14"
 }
 
 group = "org.pl"
@@ -37,7 +42,18 @@ tasks.test {
         "-Dcount_for_case=$count_for_case",
         "-Dwrite_case_time=$write_case_time"
     )
+    finalizedBy(tasks.jacocoTestReport)
 }
+
+tasks.jacocoTestReport{
+    dependsOn(tasks.test)
+    reports{
+        xml.required.set(true)
+        html.required.set(true)
+        csv.required.set(true)
+    }
+}
+
 kotlin {
     jvmToolchain(11)
 }
