@@ -144,7 +144,7 @@
 <!-- _0_9 -->
 <g id="node10" class="node">
 <title>_0_9</title>
-<polygon fill="none" stroke="black" points="688.5,-52 455.5,-52 455.5,-16 688.5,-16 688.5,-52"/>
+<polygon fill="none" stroke="red" points="688.5,-52 455.5,-52 455.5,-16 688.5,-16 688.5,-52"/>
 <text text-anchor="middle" x="572" y="-30.3" font-family="Times,serif" font-size="14.00">17 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _0_7&#45;&gt;_0_9 -->
@@ -156,7 +156,7 @@
 <!-- _0_10 -->
 <g id="node11" class="node">
 <title>_0_10</title>
-<polygon fill="none" stroke="black" points="1118,-52 884,-52 884,-16 1118,-16 1118,-52"/>
+<polygon fill="none" stroke="red" points="1118,-52 884,-52 884,-16 1118,-16 1118,-52"/>
 <text text-anchor="middle" x="1001" y="-30.3" font-family="Times,serif" font-size="14.00">18 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 1]</text>
 </g>
 <!-- _0_8&#45;&gt;_0_10 -->
@@ -210,7 +210,7 @@
 <!-- _0_17 -->
 <g id="node18" class="node">
 <title>_0_17</title>
-<polygon fill="none" stroke="black" points="527,-319 303,-319 303,-283 527,-283 527,-319"/>
+<polygon fill="none" stroke="red" points="527,-319 303,-319 303,-283 527,-283 527,-319"/>
 <text text-anchor="middle" x="415" y="-297.3" font-family="Times,serif" font-size="14.00">8 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _0_13&#45;&gt;_0_17 -->
@@ -222,7 +222,7 @@
 <!-- _0_18 -->
 <g id="node19" class="node">
 <title>_0_18</title>
-<polygon fill="none" stroke="black" points="543.5,-463 318.5,-463 318.5,-427 543.5,-427 543.5,-463"/>
+<polygon fill="none" stroke="red" points="543.5,-463 318.5,-463 318.5,-427 543.5,-427 543.5,-463"/>
 <text text-anchor="middle" x="431" y="-441.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [1, 2]</text>
 </g>
 <!-- _0_14&#45;&gt;_0_18 -->

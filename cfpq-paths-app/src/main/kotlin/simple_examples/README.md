@@ -81,6 +81,16 @@ Let's find *all* words that satisfy the language's grammar:
 
 ![Simple AnBn Graph / Finite Set Of Path / SPPF](figures/example_1_graph_sppf.dot.svg)
 
+Let's check our theoretical assumption. We use DFS to search for terminals. Start from number 0 and follow the next
+fork. Fork with number 1 gives us two different words. Follow the path 1-2-4-8 and reach the $a$ terminal. Return to
+fork number 2 and follow another path 2-5-9 to reach the $b$ terminal. **This way, we get the first word $ab$ as
+expected.**
+
+We do the same for other paths: 1-3-6-10-4-8 to reach the $a$ terminal, then return to fork with number 10 and follow
+the path 10-11-12-13-14-15-17 to reach the $a$ terminal, then return to fork number 14 and follow the path 14-16-18 to
+reach the $b$ terminal, finally return to fork number 3 and follow the path 3-7-9 to reach the $b$ terminal. **This way,
+we get the second word $aabb$ as expected.**
+
 **Example 2: Simple graph with an <ins>infinite</ins> number of paths #1**
 
 **Input graph:**
