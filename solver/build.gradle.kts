@@ -2,6 +2,11 @@ plugins {
     java
     kotlin("jvm") version "1.9.20"
     kotlin("plugin.allopen") version "1.9.20"
+    jacoco
+}
+
+jacoco{
+    toolVersion = "0.8.14"
 }
 
 repositories {
@@ -25,4 +30,16 @@ dependencies {
 
 kotlin { jvmToolchain(11) }
 
-tasks.test { useJUnitPlatform() }
+tasks.test { 
+    useJUnitPlatform() 
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport{
+    dependsOn(tasks.test)
+    reports{
+        xml.required.set(true)
+        html.required.set(true)
+        csv.required.set(true)
+    }
+}
