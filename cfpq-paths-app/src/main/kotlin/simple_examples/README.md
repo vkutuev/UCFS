@@ -113,6 +113,23 @@ Let's find *some* words that satisfy the language's grammar:
 > [!NOTE]
 > This example demonstrates that despite the infinite number of paths, the graph will be finite, as a limit is provided.
 
+Let's check our theoretical assumption. We use DFS to search for terminals. Start from number 0 and follow the next
+fork. Fork with number 1 gives us two different words. Follow the path 1-2-4-8 and reach the $a$ terminal. Return to
+fork number 2 and follow another path 2-5-9 to reach the $b$ terminal. **This way, we get the first word $ab$ as
+expected.**
+
+We do the same for other paths: 1-3-6-10-4-8 to reach the $a$ terminal, then return to fork with number 10 and follow
+the path 10-11-12-13-14-15-16-17-19 to reach the $a$ terminal, then return to fork number 16 and follow the path
+16-18-20 to
+reach the $S$ non-terminal, then return to fork number 14 and follow the path 14-7-9 to
+reach the $b$ terminal, finally return to fork number 3 and follow the path 3-7-9 to reach the $b$ terminal. **This way,
+we get the word $aaSbb$ as second word.**
+
+> [!NOTE]
+> We can see that there is a cycle in the graph. We can also see that the second word contains a non-terminal, which we
+> can also replace with $ab$ or $aaSbb$, so we can get the words $aaabbb$, $aaaaSbbbb$ -> $aaaaabbbbb$ etc. as we
+> expected.
+
 **Example 3: Simple graph with an <ins>infinite</ins> set of paths #2**
 
 **Input graph:**
