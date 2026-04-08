@@ -179,7 +179,7 @@
 <!-- _0_11 -->
 <g id="node12" class="node">
 <title>_0_11</title>
-<polygon fill="none" stroke="black" points="340.5,-52 107.5,-52 107.5,-16 340.5,-16 340.5,-52"/>
+<polygon fill="none" stroke="red" points="340.5,-52 107.5,-52 107.5,-16 340.5,-16 340.5,-52"/>
 <text text-anchor="middle" x="224" y="-30.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 0]</text>
 </g>
 <!-- _0_9&#45;&gt;_0_11 -->
@@ -191,7 +191,7 @@
 <!-- _0_13 -->
 <g id="node14" class="node">
 <title>_0_13</title>
-<polygon fill="none" stroke="black" points="531.67,-16 804.33,-16 901.43,-52 434.57,-52 531.67,-16"/>
+<polygon fill="none" stroke="green" points="531.67,-16 804.33,-16 901.43,-52 434.57,-52 531.67,-16"/>
 <text text-anchor="middle" x="668" y="-30.3" font-family="Times,serif" font-size="14.00">20 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 1]</text>
 </g>
 <!-- _0_10&#45;&gt;_0_13 -->
@@ -245,7 +245,7 @@
 <!-- _0_19 -->
 <g id="node20" class="node">
 <title>_0_19</title>
-<polygon fill="none" stroke="black" points="776,-463 552,-463 552,-427 776,-427 776,-463"/>
+<polygon fill="none" stroke="red" points="776,-463 552,-463 552,-427 776,-427 776,-463"/>
 <text text-anchor="middle" x="664" y="-441.3" font-family="Times,serif" font-size="14.00">8 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _0_15&#45;&gt;_0_19 -->
@@ -257,7 +257,7 @@
 <!-- _0_20 -->
 <g id="node21" class="node">
 <title>_0_20</title>
-<polygon fill="none" stroke="black" points="819.5,-196 594.5,-196 594.5,-160 819.5,-160 819.5,-196"/>
+<polygon fill="none" stroke="red" points="819.5,-196 594.5,-196 594.5,-160 819.5,-160 819.5,-196"/>
 <text text-anchor="middle" x="707" y="-174.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [1, 1]</text>
 </g>
 <!-- _0_16&#45;&gt;_0_20 -->
