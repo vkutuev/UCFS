@@ -19,7 +19,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
       - name: Run tests
-        run: ./gradlew --no-daemon test
+        run: ./gradlew --no-daemon jacocoTestCoverageVerification
       
       - name: Summarize tests results
         uses: jeantessier/code-coverage-summary-action@v1

@@ -31,6 +31,44 @@ tasks.jacocoTestReport{
     }
 }
 
+tasks.jacocoTestCoverageVerification{
+    dependsOn(tasks.jacocoTestReport)
+    violationRules{
+        rule{
+            isEnabled = true
+            limit{
+                counter = "INSTRUCTION"
+                value = "COVEREDRATIO"
+                minimum = "0.7".toBigDecimal()
+            }
+            limit{
+                counter = "BRANCH"
+                value = "COVEREDRATIO"
+                minimum = "0.7".toBigDecimal()
+            }
+            limit{
+                counter = "LINE"
+                value = "COVEREDRATIO"
+                minimum = "0.7".toBigDecimal()
+            }
+            limit{
+                counter = "METHOD"
+                value = "COVEREDRATIO"
+                minimum = "0.85".toBigDecimal()
+            }
+            limit {
+                counter = "CLASS"
+                value = "COVEREDRATIO"
+                minimum = "0.9".toBigDecimal()
+            }
+        }
+    }
+}
+
+tasks.check{
+    dependsOn(tasks.jacocoTestCoverageVerification)
+}
+
 kotlin {
     jvmToolchain(11)
 }
