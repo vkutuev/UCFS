@@ -11,7 +11,9 @@ The name *LL* itself stands for
 * Left-to-right scanning of the input
 * Leftmost derivation (the parse tree is constructed by expanding the leftmost nonterminal first)
 
-**Requirements for use UCFS:** 11+ java version
+> [!TIP]
+> You can read more about GLL by following
+> the [link](https://link.springer.com/chapter/10.1007/978-3-662-46663-6_5).
 
 **To run (from project root):**
 
