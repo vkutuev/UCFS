@@ -83,7 +83,7 @@ Let's find *all* words that satisfy the language's grammar:
 
 ![Simple AnBn Graph / Finite Set Of Path / SPPF](figures/example_1_graph_sppf.dot.svg)
 
-Let's check our theoretical assumption. We use DFS to search for terminals. Start from number 0 and follow the next
+Let's check our hypothesis. We use DFS to search for terminals. Start from number 0 and follow the next
 fork. Fork with number 1 gives us two different words. Follow the path 1-2-4-8 and reach the $a$ terminal. Return to
 fork number 2 and follow another path 2-5-9 to reach the $b$ terminal. **This way, we get the first word $ab$ as
 expected.**
@@ -115,7 +115,7 @@ Let's find *some* words that satisfy the language's grammar:
 > [!NOTE]
 > This example demonstrates that despite the infinite number of paths, the graph will be finite, as a limit is provided.
 
-Let's check our theoretical assumption. We use DFS to search for terminals. Start from number 0 and follow the next
+Let's check our hypothesis. We use DFS to search for terminals. Start from number 0 and follow the next
 fork. Fork with number 1 gives us two different words. Follow the path 1-2-4-8 and reach the $a$ terminal. Return to
 fork number 2 and follow another path 2-5-9 to reach the $b$ terminal. **This way, we get the first word $ab$ as
 expected.**
