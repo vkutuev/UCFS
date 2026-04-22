@@ -83,15 +83,23 @@ Let's find *all* words that satisfy the language's grammar:
 
 ![Simple AnBn Graph / Finite Set Of Path / SPPF](figures/example_1_graph_sppf.dot.svg)
 
-Let's check our hypothesis. We use DFS to search for terminals. Start from number 0 and follow the next
-fork. Fork with number 1 gives us two different words. Follow the path 1-2-4-8 and reach the $a$ terminal. Return to
-fork number 2 and follow another path 2-5-9 to reach the $b$ terminal. **This way, we get the first word $ab$ as
-expected.**
+**Let's see what the use of the algorithm gives us:**
 
-We do the same for other paths: 1-3-6-10-4-8 to reach the $a$ terminal, then return to fork with number 10 and follow
-the path 10-11-12-13-14-15-17 to reach the $a$ terminal, then return to fork number 14 and follow the path 14-16-18 to
-reach the $b$ terminal, finally return to fork number 3 and follow the path 3-7-9 to reach the $b$ terminal. **This way,
-we get the second word $aabb$ as expected.**
+Let's divide SPPF into two trees:
+
+**The *first* tree:**
+
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](figures/example_1_graph_sppf_1tree.dot.svg)
+
+We can actually see that this tree gives us the word $ab$
+
+**The *second* tree:**
+
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](figures/example_1_graph_sppf_2tree.dot.svg)
+
+When we parse this tree, we can see that this tree gives us the word $aabb$
+
+Thus, the algorithm produced exactly what was expected.
 
 **Example 2: Simple graph with an <ins>infinite</ins> number of paths #1**
 
