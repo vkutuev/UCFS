@@ -2,6 +2,11 @@
 > For demo purposes only!
 > Do not expect big graphs to be processed successfully (in reasonable time or without out-of-memory errors).
 
+> [!TIP]
+> Before using the tool, we recommend familiarizing yourself with how to define a context-free grammar using DSL — 
+> including the concepts of terminals, non-terminals, and operations — 
+> via the [link](https://formallanguageconstrainedpathquerying.github.io/UCFS/dsl/).
+
 This demo is based on UCFS, which, for a given grammar represented as an RSM, a graph, and start vertices, produces an
 SPPF.
 
@@ -10,6 +15,9 @@ labeled directed graphs. It is based on the **GLL** algorithm.
 
 **Generalized LL parsing (GLL)** is a parsing technique that extends traditional LL parsing to handle any context-free
 grammar.  
+
+* Generalized means the parser can handle any context-free grammar, including left-recursive and ambiguous ones 
+
 The name *LL* itself stands for
 
 * Left-to-right scanning of the input
@@ -67,12 +75,6 @@ type.
 ```
 
 **Code for path extraction:** ```src/main/kotlin/simple_examples/example_1.kt```
-
-
-> [!TIP]
-> You can read about how to define a context-free grammar using DSL, including what a terminal and a non-terminal are,
-> as well as about operations, by following
-> the [link](https://formallanguageconstrainedpathquerying.github.io/UCFS/dsl/).
 
 ## $a^nb^n$ Language
 
