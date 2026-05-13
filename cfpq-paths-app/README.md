@@ -106,7 +106,7 @@ with $n$ letters $b$ (Examples: $ab$, $aabb$, $aaabbb$)
 
 Let's construct an RSM for the $a^n b^n$ grammar:
 
-![RSM for AnBn Grammar](src/main/kotlin/simple_examples/figures/PointsToAnBnGrammarRsm.dot.svg)
+![RSM for AnBn Grammar](src/main/resources/figures/PointsToAnBnGrammarRsm.dot.svg)
 
 We can see how the starting non-terminal $S$ turns into either a concatenation of terminals $ab$ or a concatenation of a
 non-terminal and terminals $aSb$
@@ -119,7 +119,7 @@ non-terminal and terminals $aSb$
 
 **Input graph:**
 
-![Simple AnBn Graph / Finite Set Of Path](src/main/kotlin/simple_examples/figures/example_1_graph.dot.svg)
+![Simple AnBn Graph / Finite Set Of Path](src/main/resources/figures/example_1_graph.dot.svg)
 
 Let's find *all* words that satisfy the language's grammar:
 
@@ -128,7 +128,7 @@ Let's find *all* words that satisfy the language's grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Finite Set Of Path / SPPF](src/main/kotlin/simple_examples/figures/example_1_graph_sppf.dot.svg)
+![Simple AnBn Graph / Finite Set Of Path / SPPF](src/main/resources/figures/example_1_graph_sppf.dot.svg)
 
 **Let's see what the use of the algorithm gives us:**
 
@@ -136,13 +136,13 @@ Let's divide SPPF into two trees:
 
 **The *first* tree:**
 
-![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](src/main/kotlin/simple_examples/figures/example_1_graph_sppf_1tree.dot.svg)
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](src/main/resources/figures/example_1_graph_sppf_1tree.dot.svg)
 
 We can actually see that this tree gives us the word $ab$
 
 **The *second* tree:**
 
-![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](src/main/kotlin/simple_examples/figures/example_1_graph_sppf_2tree.dot.svg)
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](src/main/resources/figures/example_1_graph_sppf_2tree.dot.svg)
 
 When we parse this tree, we can see that this tree gives us the word $aabb$
 
@@ -152,7 +152,7 @@ Thus, the algorithm produced exactly what was expected.
 
 **Input graph:**
 
-![Simple AnBn Graph / Infinite Set Of Path #1](src/main/kotlin/simple_examples/figures/example_2_graph.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Path #1](src/main/resources/figures/example_2_graph.dot.svg)
 
 Let's find *some* words that satisfy the language's grammar:
 
@@ -165,7 +165,7 @@ Let's find *some* words that satisfy the language's grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Infinite Set Of Path #1/ SPPF](src/main/kotlin/simple_examples/figures/example_2_graph_sppf.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Path #1/ SPPF](src/main/resources/figures/example_2_graph_sppf.dot.svg)
 
 > [!NOTE]
 > This example demonstrates that despite the infinite number of paths, the graph will be finite, as a limit is provided.
@@ -176,13 +176,13 @@ Let's divide SPPF into two trees:
 
 **The *first* tree:**
 
-![Simple AnBn Graph / Ininite Set of Paths / SPPF / 1Tree](src/main/kotlin/simple_examples/figures/example_2_graph_sppf_1tree.dot.svg)
+![Simple AnBn Graph / Ininite Set of Paths / SPPF / 1Tree](src/main/resources/figures/example_2_graph_sppf_1tree.dot.svg)
 
 We can actually see that this tree gives us the word $ab$
 
 **The *second* tree:**
 
-![Simple AnBn Graph / Ininite Set of Paths / SPPF / 2Tree](src/main/kotlin/simple_examples/figures/example_2_graph_sppf_2tree.dot.svg)
+![Simple AnBn Graph / Ininite Set of Paths / SPPF / 2Tree](src/main/resources/figures/example_2_graph_sppf_2tree.dot.svg)
 
 When we analyze this tree, we see that this tree gives us the word $aaSbb$
 
@@ -196,7 +196,7 @@ Thus, the algorithm produced exactly what was expected.
 
 **Input graph:**
 
-![Simple AnBn Graph / Iinite Set Of Path #2](src/main/kotlin/simple_examples/figures/example_3_graph.dot.svg)
+![Simple AnBn Graph / Iinite Set Of Path #2](src/main/resources/figures/example_3_graph.dot.svg)
 
 Let's find *some* words that satisfy the language's grammar:
 
