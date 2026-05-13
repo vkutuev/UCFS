@@ -22,6 +22,6 @@ application {
 
 tasks.register<JavaExec>("runSimpleExamples") {
     dependsOn("classes")
-    mainClass.set("simple_examples.Example_1Kt")
+    mainClass.set("org.ucfs.paths.examples.Example_1Kt")
     classpath = sourceSets["main"].runtimeClasspath
 }
