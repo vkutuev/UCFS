@@ -37,14 +37,16 @@ tasks.test {
 
 tasks.jacocoTestReport{
     dependsOn(":test-shared:test")
+    dependsOn(tasks.test)
 
+    val localExec = layout.buildDirectory.dir("jacoco").map { it.file("test.exec").asFile }
     val testSharedExec = project(":test-shared").layout.buildDirectory.dir("jacoco").map { it.file("test.exec").asFile }
-    val kotlinClassData = layout.buildDirectory.dir("classes/kotlin/main").map{ it.asFile }
-    val javaClassData = layout.buildDirectory.dir("classes/java/main").map{ it.asFile }
+    val classData1 = layout.buildDirectory.dir("classes/java/main").map{ it.asFile }
+    val classData2 = layout.buildDirectory.dir("classes/kotlin/main").map{ it.asFile }
 
-    classDirectories.setFrom(files(kotlinClassData, javaClassData))
+    classDirectories.setFrom(files(classData1, classData2))
     sourceDirectories.setFrom(files("src/main/java", "src/main/kotlin"))
-    executionData.setFrom(testSharedExec)
+    executionData.setFrom(files(localExec, testSharedExec))
 
     reports{
         xml.required.set(true)
