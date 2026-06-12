@@ -18,7 +18,9 @@ jobs:
           java-version: '11'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
+      - name: Run tests
+        run: ./gradlew --no-daemon solver:test generator:test
       - name: Publish package
-        run: ./gradlew :publisher:publish
+        run: ./gradlew :publisher:publish --stacktrace
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
