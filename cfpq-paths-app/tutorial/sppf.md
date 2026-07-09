@@ -5,13 +5,11 @@ satisfying the specified grammar. If the number of such paths is infinite, the S
 
 The SPPF consists of several node types. Each node has a unique ID and stores type-specific information.
 
-* A **non-terminal** node contains the name of a non-terminal and pairs of vertices from the input graph that mark the
-* start and end of paths derived from that non-terminal.
+* A **non-terminal** node contains the name of a non-terminal and pairs of vertices from the input graph that mark the start and end of paths derived from that non-terminal.
 
   ![Graph for example 1](../src/main/resources/figures/Nonterm_example.dot.svg)
 
-  This node has ID ```0``` and is the root of all derivations for paths from vertex 1 to vertex 4 derivable from
-* non-terminal ```S```.
+  This node has ID ```0``` and is the root of all derivations for paths from vertex 1 to vertex 4 derivable from non-terminal ```S```.
 
 * A **terminal** node is a leaf and corresponds to an edge.
 
