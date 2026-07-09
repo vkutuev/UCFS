@@ -10,7 +10,7 @@ occurrences of $b$ (e.g., $ab$, $aabb$, $aaabbb$).
 > [!NOTE]
 > The grammar can be defined equivalently as follows.
 >```kotlin
->class PointsToAnBnGrammar : Grammar() {
+>class AnBnGrammar : Grammar() {
 >    val S by Nt().asStart()
 >
 >    init {
@@ -20,7 +20,7 @@ occurrences of $b$ (e.g., $ab$, $aabb$, $aaabbb$).
 >```
 >or
 >```kotlin
->class PointsToAnBnGrammar : Grammar() {
+>class AnBnGrammar : Grammar() {
 >    val S by Nt().asStart()
 >
 >    init {
@@ -33,7 +33,7 @@ A **recursive state machine** ([RSM](https://www.researchgate.net/publication/22
 
 The RSM for the $a^n b^n$ grammar:
 
-![RSM for AnBn Grammar](../src/main/resources/figures/PointsToAnBnGrammarRsm.dot.svg)
+![RSM for AnBn Grammar](../src/main/resources/figures/AnBnGrammarRsm.dot.svg)
 
 The start non-terminal $S$ expands to either the terminal string $ab$ or the string $aSb$.
 
