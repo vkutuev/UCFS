@@ -2,9 +2,6 @@
 
 This module contains Runnable demos for UCFS.  
 For project overview, see [../README.md](../README.md).
-<!-- Сюда можно будет добавить ссылку на весь туториал 
-(если Вы увидели данный комментарий раньше, чем прочитали комментарий к коммитам, то Вам следует вернуться 
-к комментарию, там я дал пояснения) -->
 
 ## Prerequisites
 

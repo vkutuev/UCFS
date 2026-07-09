@@ -29,7 +29,7 @@ over edge‑labeled directed graphs. Examples of such problems:
 4) **Inspect results**.
 
 Detailed information and tutorial is [here](./cfpq-paths-app/README.md)
-<!-- Предыдущая строка будет изменена в зависимости от Ваших комментариев -->
+
 ## Core Algorithm
 
 UCFS is based on Generalized LL (GLL) parsing algorithm modified to handle language specification in form of Recursive

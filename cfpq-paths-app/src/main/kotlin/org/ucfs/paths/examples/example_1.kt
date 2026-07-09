@@ -13,7 +13,7 @@ import org.ucfs.sppf.node.*
 import java.nio.file.Files
 import java.nio.file.Path
 
-class PointsToAnBnGrammar : Grammar() {
+class AnBnGrammar : Grammar() {
     val S by Nt().asStart()
 
     init {
@@ -92,7 +92,7 @@ fun saveSppf(name: String, sppf: Set<RangeSppfNode<Int>>) {
 fun main() {
     listOf("example_1_graph.dot", "example_2_graph.dot", "example_3_graph.dot").forEach { graphName ->
         val graph = readGraph(graphName)
-        val grammar = PointsToAnBnGrammar()
+        val grammar = AnBnGrammar()
         val gll = Gll.gll(grammar.rsm, graph)
         val sppf = gll.parse()
         saveSppf(graphName, sppf)
