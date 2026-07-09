@@ -21,7 +21,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
       - name: Run tests and verify coverage
         run: ./gradlew --no-daemon testCodeCoverageReport
-        
+
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.8.0
