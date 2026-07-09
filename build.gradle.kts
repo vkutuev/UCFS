@@ -2,8 +2,8 @@ plugins {
     id("java")
     id("jacoco")
     id("jacoco-report-aggregation")
-    kotlin("jvm") version "1.9.20" apply false
-    kotlin("plugin.allopen") version "1.9.20" apply false
+    kotlin("jvm") version "2.4.0" apply false
+    kotlin("plugin.allopen") version "2.4.0" apply false
 }
 
 jacoco {
