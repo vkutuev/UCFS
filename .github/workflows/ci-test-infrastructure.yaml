@@ -4,6 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
 permissions:
+  pull-requests: write
   contents: read
 jobs:
   test:
@@ -18,12 +19,17 @@ jobs:
           java-version: '11'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
-      - name: Run tests
-        run: ./gradlew --no-daemon solver:jacocoTestCoverageVerification generator:jacocoTestCoverageVerification
+      - name: Run tests and verify coverage
+        run: ./gradlew --no-daemon testCodeCoverageReport
+        
+      - name: Add coverage to PR
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.8.0
+        with:
+          paths: ${{ github.workspace }}/build/reports/jacoco/testCodeCoverageReport/testCodeCoverageReport.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          min-coverage-overall: 95
+          min-coverage-changed-lines: 0
 
-      - name: Prepare JaCoCo files for summary action
-        run: |
-          cp solver/build/reports/jacoco/test/jacocoTestReport.xml solver/build/reports/jacoco/testCodeCoverageReport.xml
-          cp generator/build/reports/jacoco/test/jacocoTestReport.xml generator/build/reports/jacoco/testCodeCoverageReport.xml
-      - name: Summarize tests results
-        uses: jeantessier/code-coverage-summary-action@v1
+      - name: Verify coverage
+        run: ./gradlew jacocoTestCoverageVerification

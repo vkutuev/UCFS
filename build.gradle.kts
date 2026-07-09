@@ -2,10 +2,13 @@ plugins {
     id("java")
     id("jacoco")
     id("jacoco-report-aggregation")
-    kotlin("jvm") version "1.9.20" apply false
-    kotlin("plugin.allopen") version "1.9.20" apply false
+    kotlin("jvm") version "2.4.0" apply false
+    kotlin("plugin.allopen") version "2.4.0" apply false
+    id("maven-publish")
+    id("pl.allegro.tech.build.axion-release") version "1.21.2"
 }
 
+// Part of test code coverage report
 jacoco {
     toolVersion = "0.8.14"
 }
@@ -63,6 +66,37 @@ tasks.jacocoTestCoverageVerification {
                 counter = "CLASS"
                 value = "COVEREDRATIO"
                 minimum = "0.90".toBigDecimal()
+            }
+        }
+    }
+}
+
+// Part of publishing
+
+group = "org.ucfs"
+
+version = scmVersion.version
+
+evaluationDependsOnChildren()
+
+publishing {
+    publications {
+        create<MavenPublication>("solver") {
+            artifactId = "solver"
+            from(project(":solver").components.getByName("java"))
+        }
+        create<MavenPublication>("generator") {
+            artifactId = "generator"
+            from(project(":generator").components.getByName("java"))
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/FormalLanguageConstrainedPathQuerying/UCFS")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
