@@ -109,15 +109,23 @@ The SPPF decomposes into two trees:
 
 The first tree corresponds to the word $ab$.
 
-**The *second* tree:**
 
-![Simple AnBn Graph / Infinite Set of Paths / SPPF / 2Tree](../src/main/resources/figures/example_2_graph_sppf_2tree.dot.svg)
 
-The second tree corresponds to the word $aaSbb$.
+**The *second* pre-tree:**
+
+![Simple AnBn Graph / Infinite Set of Paths / SPPF / 2PreTree](../src/main/resources/figures/example_2_graph_sppf_2pretree.dot.svg)
 
 > [!NOTE]
 > The SPPF contains a cycle. The label sequence $aaSbb$ includes the non-terminal $S$, which can be expanded further
 > to obtain $aaabbb$, $aaaaabbbbb$, and so on.
+
+Let's expand the nonterminal to construct the tree.
+
+**The *second* tree:**
+
+![Simple AnBn Graph / Infinite Set of Paths/ SPPF / 2Tree](../src/main/resources/figures/example_2_graph_sppf_2tree.dot.svg)
+
+This tree corresponds to the word $aaabbb$.
 
 The result matches the expected language.
 
