@@ -65,7 +65,7 @@
 <!-- _0_2 -->
 <g id="node3" class="node">
 <title>_0_2</title>
-<polygon fill="none" stroke="black" points="152.67,-2008 425.33,-2008 522.43,-2044 55.57,-2044 152.67,-2008"/>
+<polygon fill="none" stroke="green" points="152.67,-2008 425.33,-2008 522.43,-2044 55.57,-2044 152.67,-2008"/>
 <text text-anchor="middle" x="289" y="-2022.3" font-family="Times,serif" font-size="14.00">10 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _0_3 -->
@@ -153,7 +153,7 @@
 <!-- _0_10 -->
 <g id="node11" class="node">
 <title>_0_10</title>
-<polygon fill="none" stroke="black" points="965.5,-463 732.5,-463 732.5,-427 965.5,-427 965.5,-463"/>
+<polygon fill="none" stroke="red" points="965.5,-463 732.5,-463 732.5,-427 965.5,-427 965.5,-463"/>
 <text text-anchor="middle" x="849" y="-441.3" font-family="Times,serif" font-size="14.00">18 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _0_6&#45;&gt;_0_10 -->
@@ -165,7 +165,7 @@
 <!-- _0_11 -->
 <g id="node12" class="node">
 <title>_0_11</title>
-<polygon fill="none" stroke="black" points="1011,-196 777,-196 777,-160 1011,-160 1011,-196"/>
+<polygon fill="none" stroke="red" points="1011,-196 777,-196 777,-160 1011,-160 1011,-196"/>
 <text text-anchor="middle" x="894" y="-174.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _0_7&#45;&gt;_0_11 -->
@@ -236,7 +236,7 @@
 <!-- _0_15 -->
 <g id="node16" class="node">
 <title>_0_15</title>
-<polygon fill="none" stroke="black" points="534.67,-1618 807.33,-1618 904.43,-1654 437.57,-1654 534.67,-1618"/>
+<polygon fill="none" stroke="green" points="534.67,-1618 807.33,-1618 904.43,-1654 437.57,-1654 534.67,-1618"/>
 <text text-anchor="middle" x="671" y="-1632.3" font-family="Times,serif" font-size="14.00">22 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _0_14&#45;&gt;_0_15 -->
@@ -324,7 +324,7 @@
 <!-- _0_22 -->
 <g id="node23" class="node">
 <title>_0_22</title>
-<polygon fill="none" stroke="black" points="442.5,-52 209.5,-52 209.5,-16 442.5,-16 442.5,-52"/>
+<polygon fill="none" stroke="red" points="442.5,-52 209.5,-52 209.5,-16 442.5,-16 442.5,-52"/>
 <text text-anchor="middle" x="326" y="-30.3" font-family="Times,serif" font-size="14.00">29 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _0_20&#45;&gt;_0_22 -->
@@ -336,7 +336,7 @@
 <!-- _0_24 -->
 <g id="node25" class="node">
 <title>_0_24</title>
-<polygon fill="none" stroke="black" points="152.67,-1228 425.33,-1228 522.43,-1264 55.57,-1264 152.67,-1228"/>
+<polygon fill="none" stroke="green" points="152.67,-1228 425.33,-1228 522.43,-1264 55.57,-1264 152.67,-1228"/>
 <text text-anchor="middle" x="289" y="-1242.3" font-family="Times,serif" font-size="14.00">30 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _0_21&#45;&gt;_0_24 -->
@@ -435,7 +435,7 @@
 <!-- _0_30 -->
 <g id="node31" class="node">
 <title>_0_30</title>
-<polygon fill="none" stroke="black" points="514.67,-838 787.33,-838 884.43,-874 417.57,-874 514.67,-838"/>
+<polygon fill="none" stroke="green" points="514.67,-838 787.33,-838 884.43,-874 417.57,-874 514.67,-838"/>
 <text text-anchor="middle" x="651" y="-852.3" font-family="Times,serif" font-size="14.00">36 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _0_29&#45;&gt;_0_30 -->
@@ -499,7 +499,7 @@
 <!-- _0_45 -->
 <g id="node46" class="node">
 <title>_0_45</title>
-<polygon fill="none" stroke="black" points="281.5,-607 56.5,-607 56.5,-571 281.5,-571 281.5,-607"/>
+<polygon fill="none" stroke="red" points="281.5,-607 56.5,-607 56.5,-571 281.5,-571 281.5,-607"/>
 <text text-anchor="middle" x="169" y="-585.3" font-family="Times,serif" font-size="14.00">6 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _0_34&#45;&gt;_0_45 -->
@@ -529,7 +529,7 @@
 <!-- _0_37 -->
 <g id="node38" class="node">
 <title>_0_37</title>
-<polygon fill="none" stroke="black" points="311.67,-427 584.33,-427 681.43,-463 214.57,-463 311.67,-427"/>
+<polygon fill="none" stroke="green" points="311.67,-427 584.33,-427 681.43,-463 214.57,-463 311.67,-427"/>
 <text text-anchor="middle" x="448" y="-441.3" font-family="Times,serif" font-size="14.00">42 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _0_36&#45;&gt;_0_37 -->
@@ -611,7 +611,7 @@
 <!-- _0_43 -->
 <g id="node44" class="node">
 <title>_0_43</title>
-<polygon fill="none" stroke="black" points="697.67,-16 970.33,-16 1067.43,-52 600.57,-52 697.67,-16"/>
+<polygon fill="none" stroke="green" points="697.67,-16 970.33,-16 1067.43,-52 600.57,-52 697.67,-16"/>
 <text text-anchor="middle" x="834" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _0_42&#45;&gt;_0_43 -->
@@ -647,7 +647,7 @@
 <!-- _0_48 -->
 <g id="node49" class="node">
 <title>_0_48</title>
-<polygon fill="none" stroke="black" points="368,-874 144,-874 144,-838 368,-838 368,-874"/>
+<polygon fill="none" stroke="red" points="368,-874 144,-874 144,-838 368,-838 368,-874"/>
 <text text-anchor="middle" x="256" y="-852.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _0_46&#45;&gt;_0_48 -->
@@ -694,7 +694,7 @@
 <!-- _1_2 -->
 <g id="node52" class="node">
 <title>_1_2</title>
-<polygon fill="none" stroke="black" points="1641.67,-2008 1914.33,-2008 2011.43,-2044 1544.57,-2044 1641.67,-2008"/>
+<polygon fill="none" stroke="green" points="1641.67,-2008 1914.33,-2008 2011.43,-2044 1544.57,-2044 1641.67,-2008"/>
 <text text-anchor="middle" x="1778" y="-2022.3" font-family="Times,serif" font-size="14.00">10 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _1_3 -->
@@ -758,7 +758,7 @@
 <!-- _1_8 -->
 <g id="node58" class="node">
 <title>_1_8</title>
-<polygon fill="none" stroke="black" points="1460,-196 1226,-196 1226,-160 1460,-160 1460,-196"/>
+<polygon fill="none" stroke="red" points="1460,-196 1226,-196 1226,-160 1460,-160 1460,-196"/>
 <text text-anchor="middle" x="1343" y="-174.3" font-family="Times,serif" font-size="14.00">16 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _1_6&#45;&gt;_1_8 -->
@@ -794,7 +794,7 @@
 <!-- _1_11 -->
 <g id="node61" class="node">
 <title>_1_11</title>
-<polygon fill="none" stroke="black" points="1499.5,-463 1266.5,-463 1266.5,-427 1499.5,-427 1499.5,-463"/>
+<polygon fill="none" stroke="red" points="1499.5,-463 1266.5,-463 1266.5,-427 1499.5,-427 1499.5,-463"/>
 <text text-anchor="middle" x="1383" y="-441.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _1_9&#45;&gt;_1_11 -->
@@ -806,7 +806,7 @@
 <!-- _1_13 -->
 <g id="node63" class="node">
 <title>_1_13</title>
-<polygon fill="none" stroke="black" points="1758.67,-1618 2031.33,-1618 2128.43,-1654 1661.57,-1654 1758.67,-1618"/>
+<polygon fill="none" stroke="green" points="1758.67,-1618 2031.33,-1618 2128.43,-1654 1661.57,-1654 1758.67,-1618"/>
 <text text-anchor="middle" x="1895" y="-1632.3" font-family="Times,serif" font-size="14.00">20 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _1_10&#45;&gt;_1_13 -->
@@ -918,7 +918,7 @@
 <!-- _1_20 -->
 <g id="node70" class="node">
 <title>_1_20</title>
-<polygon fill="none" stroke="black" points="1559.5,-52 1326.5,-52 1326.5,-16 1559.5,-16 1559.5,-52"/>
+<polygon fill="none" stroke="red" points="1559.5,-52 1326.5,-52 1326.5,-16 1559.5,-16 1559.5,-52"/>
 <text text-anchor="middle" x="1443" y="-30.3" font-family="Times,serif" font-size="14.00">27 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _1_18&#45;&gt;_1_20 -->
@@ -930,7 +930,7 @@
 <!-- _1_21 -->
 <g id="node71" class="node">
 <title>_1_21</title>
-<polygon fill="none" stroke="black" points="1254.67,-1228 1527.33,-1228 1624.43,-1264 1157.57,-1264 1254.67,-1228"/>
+<polygon fill="none" stroke="green" points="1254.67,-1228 1527.33,-1228 1624.43,-1264 1157.57,-1264 1254.67,-1228"/>
 <text text-anchor="middle" x="1391" y="-1242.3" font-family="Times,serif" font-size="14.00">28 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _1_19&#45;&gt;_1_21 -->
@@ -1029,7 +1029,7 @@
 <!-- _1_28 -->
 <g id="node78" class="node">
 <title>_1_28</title>
-<polygon fill="none" stroke="black" points="1330.67,-838 1603.33,-838 1700.43,-874 1233.57,-874 1330.67,-838"/>
+<polygon fill="none" stroke="green" points="1330.67,-838 1603.33,-838 1700.43,-874 1233.57,-874 1330.67,-838"/>
 <text text-anchor="middle" x="1467" y="-852.3" font-family="Times,serif" font-size="14.00">34 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _1_27&#45;&gt;_1_28 -->
@@ -1111,7 +1111,7 @@
 <!-- _1_45 -->
 <g id="node95" class="node">
 <title>_1_45</title>
-<polygon fill="none" stroke="black" points="2175.5,-607 1950.5,-607 1950.5,-571 2175.5,-571 2175.5,-607"/>
+<polygon fill="none" stroke="red" points="2175.5,-607 1950.5,-607 1950.5,-571 2175.5,-571 2175.5,-607"/>
 <text text-anchor="middle" x="2063" y="-585.3" font-family="Times,serif" font-size="14.00">6 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _1_32&#45;&gt;_1_45 -->
@@ -1158,7 +1158,7 @@
 <!-- _1_37 -->
 <g id="node87" class="node">
 <title>_1_37</title>
-<polygon fill="none" stroke="black" points="1670.67,-427 1943.33,-427 2040.43,-463 1573.57,-463 1670.67,-427"/>
+<polygon fill="none" stroke="green" points="1670.67,-427 1943.33,-427 2040.43,-463 1573.57,-463 1670.67,-427"/>
 <text text-anchor="middle" x="1807" y="-441.3" font-family="Times,serif" font-size="14.00">42 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _1_36&#45;&gt;_1_37 -->
@@ -1240,7 +1240,7 @@
 <!-- _1_43 -->
 <g id="node93" class="node">
 <title>_1_43</title>
-<polygon fill="none" stroke="black" points="1989.67,-16 2262.33,-16 2359.43,-52 1892.57,-52 1989.67,-16"/>
+<polygon fill="none" stroke="green" points="1989.67,-16 2262.33,-16 2359.43,-52 1892.57,-52 1989.67,-16"/>
 <text text-anchor="middle" x="2126" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _1_42&#45;&gt;_1_43 -->
@@ -1276,7 +1276,7 @@
 <!-- _1_48 -->
 <g id="node98" class="node">
 <title>_1_48</title>
-<polygon fill="none" stroke="black" points="2027,-874 1803,-874 1803,-838 2027,-838 2027,-874"/>
+<polygon fill="none" stroke="red" points="2027,-874 1803,-874 1803,-838 2027,-838 2027,-874"/>
 <text text-anchor="middle" x="1915" y="-852.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _1_46&#45;&gt;_1_48 -->
@@ -1323,7 +1323,7 @@
 <!-- _2_2 -->
 <g id="node101" class="node">
 <title>_2_2</title>
-<polygon fill="none" stroke="black" points="2823.67,-2008 3096.33,-2008 3193.43,-2044 2726.57,-2044 2823.67,-2008"/>
+<polygon fill="none" stroke="green" points="2823.67,-2008 3096.33,-2008 3193.43,-2044 2726.57,-2044 2823.67,-2008"/>
 <text text-anchor="middle" x="2960" y="-2022.3" font-family="Times,serif" font-size="14.00">10 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _2_3 -->
@@ -1387,7 +1387,7 @@
 <!-- _2_8 -->
 <g id="node107" class="node">
 <title>_2_8</title>
-<polygon fill="none" stroke="black" points="2977,-196 2743,-196 2743,-160 2977,-160 2977,-196"/>
+<polygon fill="none" stroke="red" points="2977,-196 2743,-196 2743,-160 2977,-160 2977,-196"/>
 <text text-anchor="middle" x="2860" y="-174.3" font-family="Times,serif" font-size="14.00">16 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _2_6&#45;&gt;_2_8 -->
@@ -1423,7 +1423,7 @@
 <!-- _2_11 -->
 <g id="node110" class="node">
 <title>_2_11</title>
-<polygon fill="none" stroke="black" points="2880.5,-463 2647.5,-463 2647.5,-427 2880.5,-427 2880.5,-463"/>
+<polygon fill="none" stroke="red" points="2880.5,-463 2647.5,-463 2647.5,-427 2880.5,-427 2880.5,-463"/>
 <text text-anchor="middle" x="2764" y="-441.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _2_9&#45;&gt;_2_11 -->
@@ -1435,7 +1435,7 @@
 <!-- _2_13 -->
 <g id="node112" class="node">
 <title>_2_13</title>
-<polygon fill="none" stroke="black" points="2657.67,-1618 2930.33,-1618 3027.43,-1654 2560.57,-1654 2657.67,-1618"/>
+<polygon fill="none" stroke="green" points="2657.67,-1618 2930.33,-1618 3027.43,-1654 2560.57,-1654 2657.67,-1618"/>
 <text text-anchor="middle" x="2794" y="-1632.3" font-family="Times,serif" font-size="14.00">20 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _2_10&#45;&gt;_2_13 -->
@@ -1547,7 +1547,7 @@
 <!-- _2_20 -->
 <g id="node119" class="node">
 <title>_2_20</title>
-<polygon fill="none" stroke="black" points="2888.5,-52 2655.5,-52 2655.5,-16 2888.5,-16 2888.5,-52"/>
+<polygon fill="none" stroke="red" points="2888.5,-52 2655.5,-52 2655.5,-16 2888.5,-16 2888.5,-52"/>
 <text text-anchor="middle" x="2772" y="-30.3" font-family="Times,serif" font-size="14.00">27 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _2_18&#45;&gt;_2_20 -->
@@ -1559,7 +1559,7 @@
 <!-- _2_21 -->
 <g id="node120" class="node">
 <title>_2_21</title>
-<polygon fill="none" stroke="black" points="2675.67,-1228 2948.33,-1228 3045.43,-1264 2578.57,-1264 2675.67,-1228"/>
+<polygon fill="none" stroke="green" points="2675.67,-1228 2948.33,-1228 3045.43,-1264 2578.57,-1264 2675.67,-1228"/>
 <text text-anchor="middle" x="2812" y="-1242.3" font-family="Times,serif" font-size="14.00">28 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _2_19&#45;&gt;_2_21 -->
@@ -1693,7 +1693,7 @@
 <!-- _2_30 -->
 <g id="node129" class="node">
 <title>_2_30</title>
-<polygon fill="none" stroke="black" points="2695.67,-838 2968.33,-838 3065.43,-874 2598.57,-874 2695.67,-838"/>
+<polygon fill="none" stroke="green" points="2695.67,-838 2968.33,-838 3065.43,-874 2598.57,-874 2695.67,-838"/>
 <text text-anchor="middle" x="2832" y="-852.3" font-family="Times,serif" font-size="14.00">36 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _2_29&#45;&gt;_2_30 -->
@@ -1757,7 +1757,7 @@
 <!-- _2_45 -->
 <g id="node144" class="node">
 <title>_2_45</title>
-<polygon fill="none" stroke="black" points="3399.5,-607 3174.5,-607 3174.5,-571 3399.5,-571 3399.5,-607"/>
+<polygon fill="none" stroke="red" points="3399.5,-607 3174.5,-607 3174.5,-571 3399.5,-571 3399.5,-607"/>
 <text text-anchor="middle" x="3287" y="-585.3" font-family="Times,serif" font-size="14.00">6 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _2_34&#45;&gt;_2_45 -->
@@ -1787,7 +1787,7 @@
 <!-- _2_37 -->
 <g id="node136" class="node">
 <title>_2_37</title>
-<polygon fill="none" stroke="black" points="3067.67,-427 3340.33,-427 3437.43,-463 2970.57,-463 3067.67,-427"/>
+<polygon fill="none" stroke="green" points="3067.67,-427 3340.33,-427 3437.43,-463 2970.57,-463 3067.67,-427"/>
 <text text-anchor="middle" x="3204" y="-441.3" font-family="Times,serif" font-size="14.00">42 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _2_36&#45;&gt;_2_37 -->
@@ -1869,7 +1869,7 @@
 <!-- _2_43 -->
 <g id="node142" class="node">
 <title>_2_43</title>
-<polygon fill="none" stroke="black" points="3131.67,-16 3404.33,-16 3501.43,-52 3034.57,-52 3131.67,-16"/>
+<polygon fill="none" stroke="green" points="3131.67,-16 3404.33,-16 3501.43,-52 3034.57,-52 3131.67,-16"/>
 <text text-anchor="middle" x="3268" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _2_42&#45;&gt;_2_43 -->
@@ -1905,7 +1905,7 @@
 <!-- _2_48 -->
 <g id="node147" class="node">
 <title>_2_48</title>
-<polygon fill="none" stroke="black" points="3339,-874 3115,-874 3115,-838 3339,-838 3339,-874"/>
+<polygon fill="none" stroke="red" points="3339,-874 3115,-874 3115,-838 3339,-838 3339,-874"/>
 <text text-anchor="middle" x="3227" y="-852.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _2_46&#45;&gt;_2_48 -->
@@ -1992,7 +1992,7 @@
 <!-- _3_4 -->
 <g id="node152" class="node">
 <title>_3_4</title>
-<polygon fill="none" stroke="black" points="4109.67,-2008 4382.33,-2008 4479.43,-2044 4012.57,-2044 4109.67,-2008"/>
+<polygon fill="none" stroke="green" points="4109.67,-2008 4382.33,-2008 4479.43,-2044 4012.57,-2044 4109.67,-2008"/>
 <text text-anchor="middle" x="4246" y="-2022.3" font-family="Times,serif" font-size="14.00">12 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _3_3&#45;&gt;_3_4 -->
@@ -2062,7 +2062,7 @@
 <!-- _3_10 -->
 <g id="node158" class="node">
 <title>_3_10</title>
-<polygon fill="none" stroke="black" points="4411,-196 4177,-196 4177,-160 4411,-160 4411,-196"/>
+<polygon fill="none" stroke="red" points="4411,-196 4177,-196 4177,-160 4411,-160 4411,-196"/>
 <text text-anchor="middle" x="4294" y="-174.3" font-family="Times,serif" font-size="14.00">18 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _3_8&#45;&gt;_3_10 -->
@@ -2098,7 +2098,7 @@
 <!-- _3_14 -->
 <g id="node162" class="node">
 <title>_3_14</title>
-<polygon fill="none" stroke="black" points="4346.5,-463 4113.5,-463 4113.5,-427 4346.5,-427 4346.5,-463"/>
+<polygon fill="none" stroke="red" points="4346.5,-463 4113.5,-463 4113.5,-427 4346.5,-427 4346.5,-463"/>
 <text text-anchor="middle" x="4230" y="-441.3" font-family="Times,serif" font-size="14.00">21 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _3_11&#45;&gt;_3_14 -->
@@ -2128,7 +2128,7 @@
 <!-- _3_15 -->
 <g id="node163" class="node">
 <title>_3_15</title>
-<polygon fill="none" stroke="black" points="4069.67,-1618 4342.33,-1618 4439.43,-1654 3972.57,-1654 4069.67,-1618"/>
+<polygon fill="none" stroke="green" points="4069.67,-1618 4342.33,-1618 4439.43,-1654 3972.57,-1654 4069.67,-1618"/>
 <text text-anchor="middle" x="4206" y="-1632.3" font-family="Times,serif" font-size="14.00">22 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _3_13&#45;&gt;_3_15 -->
@@ -2222,7 +2222,7 @@
 <!-- _3_22 -->
 <g id="node170" class="node">
 <title>_3_22</title>
-<polygon fill="none" stroke="black" points="3903.5,-52 3670.5,-52 3670.5,-16 3903.5,-16 3903.5,-52"/>
+<polygon fill="none" stroke="red" points="3903.5,-52 3670.5,-52 3670.5,-16 3903.5,-16 3903.5,-52"/>
 <text text-anchor="middle" x="3787" y="-30.3" font-family="Times,serif" font-size="14.00">29 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _3_20&#45;&gt;_3_22 -->
@@ -2234,7 +2234,7 @@
 <!-- _3_24 -->
 <g id="node172" class="node">
 <title>_3_24</title>
-<polygon fill="none" stroke="black" points="4049.67,-1228 4322.33,-1228 4419.43,-1264 3952.57,-1264 4049.67,-1228"/>
+<polygon fill="none" stroke="green" points="4049.67,-1228 4322.33,-1228 4419.43,-1264 3952.57,-1264 4049.67,-1228"/>
 <text text-anchor="middle" x="4186" y="-1242.3" font-family="Times,serif" font-size="14.00">30 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _3_21&#45;&gt;_3_24 -->
@@ -2334,7 +2334,7 @@
 <!-- _3_30 -->
 <g id="node178" class="node">
 <title>_3_30</title>
-<polygon fill="none" stroke="black" points="4029.67,-838 4302.33,-838 4399.43,-874 3932.57,-874 4029.67,-838"/>
+<polygon fill="none" stroke="green" points="4029.67,-838 4302.33,-838 4399.43,-874 3932.57,-874 4029.67,-838"/>
 <text text-anchor="middle" x="4166" y="-852.3" font-family="Times,serif" font-size="14.00">36 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _3_29&#45;&gt;_3_30 -->
@@ -2398,7 +2398,7 @@
 <!-- _3_47 -->
 <g id="node195" class="node">
 <title>_3_47</title>
-<polygon fill="none" stroke="black" points="3863,-874 3639,-874 3639,-838 3863,-838 3863,-874"/>
+<polygon fill="none" stroke="red" points="3863,-874 3639,-874 3639,-838 3863,-838 3863,-874"/>
 <text text-anchor="middle" x="3751" y="-852.3" font-family="Times,serif" font-size="14.00">8 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _3_34&#45;&gt;_3_47 -->
@@ -2428,7 +2428,7 @@
 <!-- _3_37 -->
 <g id="node185" class="node">
 <title>_3_37</title>
-<polygon fill="none" stroke="black" points="3702.67,-427 3975.33,-427 4072.43,-463 3605.57,-463 3702.67,-427"/>
+<polygon fill="none" stroke="green" points="3702.67,-427 3975.33,-427 4072.43,-463 3605.57,-463 3702.67,-427"/>
 <text text-anchor="middle" x="3839" y="-441.3" font-family="Times,serif" font-size="14.00">42 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _3_36&#45;&gt;_3_37 -->
@@ -2510,7 +2510,7 @@
 <!-- _3_43 -->
 <g id="node191" class="node">
 <title>_3_43</title>
-<polygon fill="none" stroke="black" points="4131.67,-16 4404.33,-16 4501.43,-52 4034.57,-52 4131.67,-16"/>
+<polygon fill="none" stroke="green" points="4131.67,-16 4404.33,-16 4501.43,-52 4034.57,-52 4131.67,-16"/>
 <text text-anchor="middle" x="4268" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _3_42&#45;&gt;_3_43 -->
@@ -2528,7 +2528,7 @@
 <!-- _3_48 -->
 <g id="node196" class="node">
 <title>_3_48</title>
-<polygon fill="none" stroke="black" points="4284.5,-607 4059.5,-607 4059.5,-571 4284.5,-571 4284.5,-607"/>
+<polygon fill="none" stroke="red" points="4284.5,-607 4059.5,-607 4059.5,-571 4284.5,-571 4284.5,-607"/>
 <text text-anchor="middle" x="4172" y="-585.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _3_44&#45;&gt;_3_48 -->
@@ -2581,7 +2581,7 @@
 <!-- _4_2 -->
 <g id="node199" class="node">
 <title>_4_2</title>
-<polygon fill="none" stroke="black" points="5461.67,-2008 5734.33,-2008 5831.43,-2044 5364.57,-2044 5461.67,-2008"/>
+<polygon fill="none" stroke="green" points="5461.67,-2008 5734.33,-2008 5831.43,-2044 5364.57,-2044 5461.67,-2008"/>
 <text text-anchor="middle" x="5598" y="-2022.3" font-family="Times,serif" font-size="14.00">10 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _4_3 -->
@@ -2645,7 +2645,7 @@
 <!-- _4_8 -->
 <g id="node205" class="node">
 <title>_4_8</title>
-<polygon fill="none" stroke="black" points="4962,-196 4728,-196 4728,-160 4962,-160 4962,-196"/>
+<polygon fill="none" stroke="red" points="4962,-196 4728,-196 4728,-160 4962,-160 4962,-196"/>
 <text text-anchor="middle" x="4845" y="-174.3" font-family="Times,serif" font-size="14.00">16 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _4_6&#45;&gt;_4_8 -->
@@ -2681,7 +2681,7 @@
 <!-- _4_11 -->
 <g id="node208" class="node">
 <title>_4_11</title>
-<polygon fill="none" stroke="black" points="5360.5,-463 5127.5,-463 5127.5,-427 5360.5,-427 5360.5,-463"/>
+<polygon fill="none" stroke="red" points="5360.5,-463 5127.5,-463 5127.5,-427 5360.5,-427 5360.5,-463"/>
 <text text-anchor="middle" x="5244" y="-441.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _4_9&#45;&gt;_4_11 -->
@@ -2693,7 +2693,7 @@
 <!-- _4_13 -->
 <g id="node210" class="node">
 <title>_4_13</title>
-<polygon fill="none" stroke="black" points="5035.67,-1618 5308.33,-1618 5405.43,-1654 4938.57,-1654 5035.67,-1618"/>
+<polygon fill="none" stroke="green" points="5035.67,-1618 5308.33,-1618 5405.43,-1654 4938.57,-1654 5035.67,-1618"/>
 <text text-anchor="middle" x="5172" y="-1632.3" font-family="Times,serif" font-size="14.00">20 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _4_10&#45;&gt;_4_13 -->
@@ -2805,7 +2805,7 @@
 <!-- _4_20 -->
 <g id="node217" class="node">
 <title>_4_20</title>
-<polygon fill="none" stroke="black" points="4864.5,-52 4631.5,-52 4631.5,-16 4864.5,-16 4864.5,-52"/>
+<polygon fill="none" stroke="red" points="4864.5,-52 4631.5,-52 4631.5,-16 4864.5,-16 4864.5,-52"/>
 <text text-anchor="middle" x="4748" y="-30.3" font-family="Times,serif" font-size="14.00">27 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _4_18&#45;&gt;_4_20 -->
@@ -2817,7 +2817,7 @@
 <!-- _4_21 -->
 <g id="node218" class="node">
 <title>_4_21</title>
-<polygon fill="none" stroke="black" points="5055.67,-1228 5328.33,-1228 5425.43,-1264 4958.57,-1264 5055.67,-1228"/>
+<polygon fill="none" stroke="green" points="5055.67,-1228 5328.33,-1228 5425.43,-1264 4958.57,-1264 5055.67,-1228"/>
 <text text-anchor="middle" x="5192" y="-1242.3" font-family="Times,serif" font-size="14.00">28 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _4_19&#45;&gt;_4_21 -->
@@ -2916,7 +2916,7 @@
 <!-- _4_28 -->
 <g id="node225" class="node">
 <title>_4_28</title>
-<polygon fill="none" stroke="black" points="5079.67,-838 5352.33,-838 5449.43,-874 4982.57,-874 5079.67,-838"/>
+<polygon fill="none" stroke="green" points="5079.67,-838 5352.33,-838 5449.43,-874 4982.57,-874 5079.67,-838"/>
 <text text-anchor="middle" x="5216" y="-852.3" font-family="Times,serif" font-size="14.00">34 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _4_27&#45;&gt;_4_28 -->
@@ -2998,7 +2998,7 @@
 <!-- _4_35 -->
 <g id="node232" class="node">
 <title>_4_35</title>
-<polygon fill="none" stroke="black" points="4678.67,-427 4951.33,-427 5048.43,-463 4581.57,-463 4678.67,-427"/>
+<polygon fill="none" stroke="green" points="4678.67,-427 4951.33,-427 5048.43,-463 4581.57,-463 4678.67,-427"/>
 <text text-anchor="middle" x="4815" y="-441.3" font-family="Times,serif" font-size="14.00">40 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _4_33&#45;&gt;_4_35 -->
@@ -3010,7 +3010,7 @@
 <!-- _4_45 -->
 <g id="node242" class="node">
 <title>_4_45</title>
-<polygon fill="none" stroke="black" points="4855.5,-607 4630.5,-607 4630.5,-571 4855.5,-571 4855.5,-607"/>
+<polygon fill="none" stroke="red" points="4855.5,-607 4630.5,-607 4630.5,-571 4855.5,-571 4855.5,-607"/>
 <text text-anchor="middle" x="4743" y="-585.3" font-family="Times,serif" font-size="14.00">6 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _4_34&#45;&gt;_4_45 -->
@@ -3127,7 +3127,7 @@
 <!-- _4_43 -->
 <g id="node240" class="node">
 <title>_4_43</title>
-<polygon fill="none" stroke="black" points="5396.67,-16 5669.33,-16 5766.43,-52 5299.57,-52 5396.67,-16"/>
+<polygon fill="none" stroke="green" points="5396.67,-16 5669.33,-16 5766.43,-52 5299.57,-52 5396.67,-16"/>
 <text text-anchor="middle" x="5533" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _4_42&#45;&gt;_4_43 -->
@@ -3163,7 +3163,7 @@
 <!-- _4_48 -->
 <g id="node245" class="node">
 <title>_4_48</title>
-<polygon fill="none" stroke="black" points="5743,-874 5519,-874 5519,-838 5743,-838 5743,-874"/>
+<polygon fill="none" stroke="red" points="5743,-874 5519,-874 5519,-838 5743,-838 5743,-874"/>
 <text text-anchor="middle" x="5631" y="-852.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _4_46&#45;&gt;_4_48 -->
@@ -3210,7 +3210,7 @@
 <!-- _5_2 -->
 <g id="node248" class="node">
 <title>_5_2</title>
-<polygon fill="none" stroke="black" points="6096.67,-2008 6369.33,-2008 6466.43,-2044 5999.57,-2044 6096.67,-2008"/>
+<polygon fill="none" stroke="green" points="6096.67,-2008 6369.33,-2008 6466.43,-2044 5999.57,-2044 6096.67,-2008"/>
 <text text-anchor="middle" x="6233" y="-2022.3" font-family="Times,serif" font-size="14.00">10 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 2]</text>
 </g>
 <!-- _5_3 -->
@@ -3274,7 +3274,7 @@
 <!-- _5_8 -->
 <g id="node254" class="node">
 <title>_5_8</title>
-<polygon fill="none" stroke="black" points="6481,-196 6247,-196 6247,-160 6481,-160 6481,-196"/>
+<polygon fill="none" stroke="red" points="6481,-196 6247,-196 6247,-160 6481,-160 6481,-196"/>
 <text text-anchor="middle" x="6364" y="-174.3" font-family="Times,serif" font-size="14.00">16 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [3, 2]</text>
 </g>
 <!-- _5_6&#45;&gt;_5_8 -->
@@ -3310,7 +3310,7 @@
 <!-- _5_11 -->
 <g id="node257" class="node">
 <title>_5_11</title>
-<polygon fill="none" stroke="black" points="6256.5,-463 6023.5,-463 6023.5,-427 6256.5,-427 6256.5,-463"/>
+<polygon fill="none" stroke="red" points="6256.5,-463 6023.5,-463 6023.5,-427 6256.5,-427 6256.5,-463"/>
 <text text-anchor="middle" x="6140" y="-441.3" font-family="Times,serif" font-size="14.00">19 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [0, 1]</text>
 </g>
 <!-- _5_9&#45;&gt;_5_11 -->
@@ -3322,7 +3322,7 @@
 <!-- _5_13 -->
 <g id="node259" class="node">
 <title>_5_13</title>
-<polygon fill="none" stroke="black" points="6442.67,-1618 6715.33,-1618 6812.43,-1654 6345.57,-1654 6442.67,-1618"/>
+<polygon fill="none" stroke="green" points="6442.67,-1618 6715.33,-1618 6812.43,-1654 6345.57,-1654 6442.67,-1618"/>
 <text text-anchor="middle" x="6579" y="-1632.3" font-family="Times,serif" font-size="14.00">20 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 3]</text>
 </g>
 <!-- _5_10&#45;&gt;_5_13 -->
@@ -3434,7 +3434,7 @@
 <!-- _5_20 -->
 <g id="node266" class="node">
 <title>_5_20</title>
-<polygon fill="none" stroke="black" points="6733.5,-52 6500.5,-52 6500.5,-16 6733.5,-16 6733.5,-52"/>
+<polygon fill="none" stroke="red" points="6733.5,-52 6500.5,-52 6500.5,-16 6733.5,-16 6733.5,-52"/>
 <text text-anchor="middle" x="6617" y="-30.3" font-family="Times,serif" font-size="14.00">27 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [1, 2]</text>
 </g>
 <!-- _5_17&#45;&gt;_5_20 -->
@@ -3446,7 +3446,7 @@
 <!-- _5_45 -->
 <g id="node291" class="node">
 <title>_5_45</title>
-<polygon fill="none" stroke="black" points="6926.5,-607 6701.5,-607 6701.5,-571 6926.5,-571 6926.5,-607"/>
+<polygon fill="none" stroke="red" points="6926.5,-607 6701.5,-607 6701.5,-571 6926.5,-571 6926.5,-607"/>
 <text text-anchor="middle" x="6814" y="-585.3" font-family="Times,serif" font-size="14.00">6 &#160;&#160;&#160;&#160;Terminal &#39;b&#39;, input: [2, 3]</text>
 </g>
 <!-- _5_18&#45;&gt;_5_45 -->
@@ -3487,7 +3487,7 @@
 <!-- _5_24 -->
 <g id="node270" class="node">
 <title>_5_24</title>
-<polygon fill="none" stroke="black" points="6433.67,-1228 6706.33,-1228 6803.43,-1264 6336.57,-1264 6433.67,-1228"/>
+<polygon fill="none" stroke="green" points="6433.67,-1228 6706.33,-1228 6803.43,-1264 6336.57,-1264 6433.67,-1228"/>
 <text text-anchor="middle" x="6570" y="-1242.3" font-family="Times,serif" font-size="14.00">30 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 2]</text>
 </g>
 <!-- _5_22&#45;&gt;_5_24 -->
@@ -3586,7 +3586,7 @@
 <!-- _5_30 -->
 <g id="node276" class="node">
 <title>_5_30</title>
-<polygon fill="none" stroke="black" points="6413.67,-838 6686.33,-838 6783.43,-874 6316.57,-874 6413.67,-838"/>
+<polygon fill="none" stroke="green" points="6413.67,-838 6686.33,-838 6783.43,-874 6316.57,-874 6413.67,-838"/>
 <text text-anchor="middle" x="6550" y="-852.3" font-family="Times,serif" font-size="14.00">36 &#160;&#160;&#160;&#160;Nonterminal S, input: [0, 3]</text>
 </g>
 <!-- _5_29&#45;&gt;_5_30 -->
@@ -3674,7 +3674,7 @@
 <!-- _5_37 -->
 <g id="node283" class="node">
 <title>_5_37</title>
-<polygon fill="none" stroke="black" points="6479.67,-427 6752.33,-427 6849.43,-463 6382.57,-463 6479.67,-427"/>
+<polygon fill="none" stroke="green" points="6479.67,-427 6752.33,-427 6849.43,-463 6382.57,-463 6479.67,-427"/>
 <text text-anchor="middle" x="6616" y="-441.3" font-family="Times,serif" font-size="14.00">42 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 2]</text>
 </g>
 <!-- _5_36&#45;&gt;_5_37 -->
@@ -3756,7 +3756,7 @@
 <!-- _5_43 -->
 <g id="node289" class="node">
 <title>_5_43</title>
-<polygon fill="none" stroke="black" points="6901.67,-16 7174.33,-16 7271.43,-52 6804.57,-52 6901.67,-16"/>
+<polygon fill="none" stroke="green" points="6901.67,-16 7174.33,-16 7271.43,-52 6804.57,-52 6901.67,-16"/>
 <text text-anchor="middle" x="7038" y="-30.3" font-family="Times,serif" font-size="14.00">48 &#160;&#160;&#160;&#160;Nonterminal S, input: [2, 3]</text>
 </g>
 <!-- _5_42&#45;&gt;_5_43 -->
@@ -3792,7 +3792,7 @@
 <!-- _5_48 -->
 <g id="node294" class="node">
 <title>_5_48</title>
-<polygon fill="none" stroke="black" points="6247,-874 6023,-874 6023,-838 6247,-838 6247,-874"/>
+<polygon fill="none" stroke="red" points="6247,-874 6023,-874 6023,-838 6247,-838 6247,-874"/>
 <text text-anchor="middle" x="6135" y="-852.3" font-family="Times,serif" font-size="14.00">9 &#160;&#160;&#160;&#160;Terminal &#39;a&#39;, input: [2, 0]</text>
 </g>
 <!-- _5_46&#45;&gt;_5_48 -->

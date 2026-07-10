@@ -85,7 +85,7 @@
 <!-- _0_4 -->
 <g id="node5" class="node">
 <title>_0_4</title>
-<polygon fill="none" stroke="black" points="112.67,-427 385.33,-427 482.43,-463 15.57,-463 112.67,-427"/>
+<polygon fill="none" stroke="green" points="112.67,-427 385.33,-427 482.43,-463 15.57,-463 112.67,-427"/>
 <text text-anchor="middle" x="249" y="-441.3" font-family="Times,serif" font-size="14.00">12 &#160;&#160;&#160;&#160;Nonterminal S, input: [1, 1]</text>
 </g>
 <!-- _0_3&#45;&gt;_0_4 -->
