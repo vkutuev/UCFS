@@ -8,8 +8,8 @@ _0_1 [label = "1     Range , input: [0, 1], rsm: [S_0, S_3]", shape = ellipse]
 _0_12 [label = "2     Intermediate input: 1, rsm: S_1, input: [0, 1]", shape = plain]
 _0_15 [label = "4     Range , input: [0, 1], rsm: [S_0, S_1]", shape = ellipse]
 _0_16 [label = "5     Range , input: [1, 1], rsm: [S_1, S_3]", shape = ellipse]
-_0_19 [label = "8     Terminal 'a', input: [0, 1]", shape = rectangle]
-_0_20 [label = "9     Terminal 'b', input: [1, 1]", shape = rectangle]
+_0_19 [label = "8     Terminal 'a', input: [0, 1]", shape = rectangle, color = "red"]
+_0_20 [label = "9     Terminal 'b', input: [1, 1]", shape = rectangle, color = "red"]
 _0_0->_0_1
 _0_1->_0_12
 _0_12->_0_15
