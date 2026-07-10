@@ -28,56 +28,6 @@ fun readGraph(name: String): InputGraph<Int, TerminalInputLabel> {
     return dotParser.parseDot(dotGraph)
 }
 
-data class OutEdge(val start: Int, val symbol: String, val end: Int) {
-    override fun toString(): String = "(" + start.toString() + "-" + symbol + "->" + end.toString() + ")"
-}
-
-fun getPathFromSppf(node: RangeSppfNode<Int>, maxDepth: Int): List<List<OutEdge>>? {
-    if (maxDepth == 0) {
-        return null
-    }
-    when (val nodeType = node.type) {
-        is TerminalType<*> -> {
-            val range = node.inputRange ?: throw RuntimeException("Null inputRange for TerminalType node of SPPF")
-            return listOf(listOf(OutEdge(range.from, nodeType.terminal.toString(), range.to)))
-        }
-
-        is EpsilonNonterminalType -> {
-            return listOf(emptyList())
-        }
-
-        is EmptyType -> {
-            throw RuntimeException("SPPF cannot contain EmptyRange")
-        }
-
-        is IntermediateType<*>, is NonterminalType -> {
-            val subPaths = node.children.map { getPathFromSppf(it, maxDepth - 1) }
-            if (subPaths.any { it == null }) {
-                return null
-            }
-            val paths = subPaths.filterNotNull().fold(listOf(listOf<OutEdge>())) { acc, lst ->
-                acc.flatMap { list -> lst.map { element -> list + element } }
-            }
-            return paths
-        }
-
-        is Range -> {
-            val paths = node.children.map {
-                getPathFromSppf(it, maxDepth - 1)?.filterNotNull()
-            }.filterNotNull().flatten()
-            if (paths.isEmpty()) {
-                return null
-            }
-            return paths
-        }
-
-        else -> {
-            println("Type of node is ${node.type.javaClass}")
-            throw RuntimeException("Unknown RangeType in SPPF")
-        }
-    }
-}
-
 fun saveSppf(name: String, sppf: Set<RangeSppfNode<Int>>) {
     val graphName = name.removeSuffix(".dot")
     val genPath = Path.of("gen", "sppf")

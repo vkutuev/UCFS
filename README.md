@@ -28,8 +28,42 @@ over edge‑labeled directed graphs. Examples of such problems:
 3) **Run query**.
 4) **Inspect results**.
 
-Detailed information and tutorial is [here](./cfpq-paths-app/README.md)
+## Quick start
+Find all paths in the graph that satisfy the grammar:
+1) Describe grammar
+```kotlin
+class AnBnGrammar : Grammar() {
+    val S by Nt().asStart()
 
+    init {
+        S /= "a" * Option(S) * "b"
+    }
+}
+```
+2) Load the graph
+
+![example_1_graph.dot](cfpq-paths-app/src/main/resources/figures/example_1_graph.dot.svg)
+```kotlin
+fun main() {
+    listOf("example_1_graph.dot").forEach { graphName ->
+        val graph = readGraph(graphName)
+        val grammar = AnBnGrammar()
+        val gll = Gll.gll(grammar.rsm, graph)
+        val sppf = gll.parse()
+        saveSppf(graphName, sppf)
+    }
+}
+```
+3) Inspect results from SPPF
+![Results as SPPF](cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf.dot.svg)
+   SPPF contains a compressed representation of set of paths:
+
+![Path 1 Extracted From SPPF](cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_1extraction.dot.svg)
+![Path 2 Extracted From SPPF](cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_2extraction.dot.svg)
+
+> [!NOTE]
+> At this stage of using UCFS, we get compressed representation of the entire set of extractable paths, and if you need to work with them further, you can add custom 
+> functions for your task. You can see an example of this [here](cfpq-paths-app/tutorial/complex-examples.md)
 ## Core Algorithm
 
 UCFS is based on Generalized LL (GLL) parsing algorithm modified to handle language specification in form of Recursive
