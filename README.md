@@ -63,7 +63,7 @@ fun main() {
 
 > [!NOTE]
 > At this stage of using UCFS, we get compressed representation of the entire set of extractable paths, and if you need to work with them further, you can add custom 
-> functions for your task. You can see an example of this [here](cfpq-paths-app/tutorial/complex-examples.md)
+> functions for your task. You can see an example of this [here](docs/docs/usage-examples.md)
 ## Core Algorithm
 
 UCFS is based on Generalized LL (GLL) parsing algorithm modified to handle language specification in form of Recursive
