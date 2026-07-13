@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.ucfs.input.DotParser
 import org.ucfs.input.InputGraph
@@ -8,16 +9,17 @@ import java.nio.file.Path
 import kotlin.test.assertEquals
 
 class TestDotParser {
-//    @Test
-//    fun testParser(){
-//        val testCasesFolder = File(Path.of("src", "test", "resources", "dotParserTest").toUri())
-//        if (!testCasesFolder.exists()) {
-//            println("Can't find test case for dotParserTest")
-//        }
-//        for (file in testCasesFolder.listFiles()) {
-//            val originalDot = file.readText()
-//            val graph: InputGraph<Int, TerminalInputLabel> = DotParser().parseDot(originalDot)
-//            assertEquals(originalDot, DotWriter().getDotView(graph))
-//        }
-//    }
+    @Disabled("DotWriter drops quotes around label values during serialization")
+    @Test
+    fun testParser(){
+        val testCasesFolder = File(Path.of("src", "test", "resources", "dotParserTest").toUri())
+        if (!testCasesFolder.exists()) {
+            println("Can't find test case for dotParserTest")
+        }
+        for (file in testCasesFolder.listFiles()) {
+            val originalDot = file.readText()
+            val graph: InputGraph<Int, TerminalInputLabel> = DotParser().parseDot(originalDot)
+            assertEquals(originalDot, DotWriter().getDotView(graph))
+        }
+    }
 }
