@@ -33,7 +33,7 @@ A **recursive state machine** ([RSM](https://www.researchgate.net/publication/22
 
 The RSM for the $a^n b^n$ grammar:
 
-![RSM for AnBn Grammar](../../cfpq-paths-app/src/main/resources/figures/AnBnGrammarRsm.dot.svg)
+![RSM for AnBn Grammar](assets/AnBnGrammarRsm.dot.svg)
 
 The start non-terminal $S$ expands to either the terminal string $ab$ or the string $aSb$.
 
@@ -51,7 +51,7 @@ The start non-terminal $S$ expands to either the terminal string $ab$ or the str
 
 **Input graph:**
 
-![Simple AnBn Graph / Finite Set Of Paths](../../cfpq-paths-app/src/main/resources/figures/example_1_graph.dot.svg)
+![Simple AnBn Graph / Finite Set Of Paths](assets/example_1_graph.dot.svg)
 
 The following words satisfy the grammar:
 
@@ -60,19 +60,19 @@ The following words satisfy the grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Finite Set Of Paths / SPPF](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf.dot.svg)
+![Simple AnBn Graph / Finite Set Of Paths / SPPF](assets/example_1_graph_sppf.dot.svg)
 
 The SPPF decomposes into two trees:
 
 **The *first* tree:**
 
-![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_1tree.dot.svg)
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 1Tree](assets/example_1_graph_sppf_1tree.dot.svg)
 
 The first tree corresponds to the word $ab$.
 
 **The *second* tree:**
 
-![Simple AnBn Graph / Finite Set of Paths / SPPF / 2Tree](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_2tree.dot.svg)
+![Simple AnBn Graph / Finite Set of Paths / SPPF / 2Tree](assets/example_1_graph_sppf_2tree.dot.svg)
 
 The second tree corresponds to the word $aabb$.
 
@@ -82,7 +82,7 @@ The result matches the expected language.
 
 **Input graph:**
 
-![Simple AnBn Graph / Infinite Set Of Paths #1](../../cfpq-paths-app/src/main/resources/figures/example_2_graph.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Paths #1](assets/example_2_graph.dot.svg)
 
 Examples of words that satisfy the grammar:
 
@@ -95,7 +95,7 @@ Examples of words that satisfy the grammar:
 
 **Resulting SPPF graph:**
 
-![Simple AnBn Graph / Infinite Set Of Paths #1 / SPPF](../../cfpq-paths-app/src/main/resources/figures/example_2_graph_sppf.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Paths #1 / SPPF](assets/example_2_graph_sppf.dot.svg)
 
 > [!NOTE]
 > This example shows that although the number of paths is infinite, the SPPF remains finite when a depth limit
@@ -105,7 +105,7 @@ The SPPF decomposes into two trees:
 
 **The *first* tree:**
 
-![Simple AnBn Graph / Infinite Set of Paths / SPPF / 1Tree](../../cfpq-paths-app/src/main/resources/figures/example_2_graph_sppf_1tree.dot.svg)
+![Simple AnBn Graph / Infinite Set of Paths / SPPF / 1Tree](assets/example_2_graph_sppf_1tree.dot.svg)
 
 The first tree corresponds to the word $ab$.
 
@@ -113,7 +113,7 @@ The first tree corresponds to the word $ab$.
 
 **The *second* pre-tree:**
 
-![Simple AnBn Graph / Infinite Set of Paths / SPPF / 2PreTree](../../cfpq-paths-app/src/main/resources/figures/example_2_graph_sppf_2pretree.dot.svg)
+![Simple AnBn Graph / Infinite Set of Paths / SPPF / 2PreTree](assets/example_2_graph_sppf_2pretree.dot.svg)
 
 > [!NOTE]
 > The SPPF contains a cycle. The label sequence $aaSbb$ includes the non-terminal $S$, which can be expanded further
@@ -123,7 +123,7 @@ Let's expand the nonterminal to construct the tree.
 
 **The *second* tree:**
 
-![Simple AnBn Graph / Infinite Set of Paths/ SPPF / 2Tree](../../cfpq-paths-app/src/main/resources/figures/example_2_graph_sppf_2tree.dot.svg)
+![Simple AnBn Graph / Infinite Set of Paths/ SPPF / 2Tree](assets/example_2_graph_sppf_2tree.dot.svg)
 
 This tree corresponds to the word $aaabbb$.
 
@@ -133,7 +133,7 @@ The result matches the expected language.
 
 **Input graph:**
 
-![Simple AnBn Graph / Infinite Set Of Paths #2](../../cfpq-paths-app/src/main/resources/figures/example_3_graph.dot.svg)
+![Simple AnBn Graph / Infinite Set Of Paths #2](assets/example_3_graph.dot.svg)
 
 Examples of words that satisfy the grammar:
 
@@ -146,7 +146,7 @@ Examples of words that satisfy the grammar:
 > The graph yields infinitely many words that cover the full language, because it has several start vertices.
 
 The resulting SPPF is too large to include here; see
-```src/main/resources/figures/example_3_graph_sppf.dot.svg```
+```docs/docs/assets/example_3_graph_sppf.dot.svg```
 
 # PointsTo analysis
 
@@ -177,7 +177,7 @@ S -> (Alias? "store_i")* PointsTo
 In all examples below, the grammar uses indices $i \in [0..3]$.
 The corresponding RSM:
 
-![Graph for example 1](../../cfpq-paths-app/src/main/resources/figures/rsm.dot.svg)
+![Graph for example 1](assets/rsm.dot.svg)
 
 ## Example 1
 
@@ -195,11 +195,11 @@ t.v = z
 
 Corresponding graph:
 
-![Graph for example 1](../../cfpq-paths-app/src/main/resources/figures/graph_1.dot.svg)
+![Graph for example 1](assets/graph_1.dot.svg)
 
 The resulting SPPF:
 
-![SPPF for example 1](../../cfpq-paths-app/src/main/resources/figures/graph_1_sppf.dot.svg)
+![SPPF for example 1](assets/graph_1_sppf.dot.svg)
 
 Three trees are extracted because there are three paths of interest from node 1.
 Subpaths derivable from non-terminals ```Alias``` and ```PointsTo``` are omitted, because they do not contribute
@@ -234,11 +234,11 @@ while (...){
 
 Corresponding graph:
 
-![Graph for example 2](../../cfpq-paths-app/src/main/resources/figures/graph_2.dot.svg)
+![Graph for example 2](assets/graph_2.dot.svg)
 
 Part of the resulting SPPF:
 
-![SPPF for example 2](../../cfpq-paths-app/src/main/resources/figures/graph_2_sppf.dot.svg)
+![SPPF for example 2](assets/graph_2_sppf.dot.svg)
 
 This fragment contains a cycle on vertices 27–31–34–37–38–40–42–44–47–49–52–56 (shown in red), indicating infinitely
 many paths of interest. A sample of extracted paths:
@@ -285,11 +285,11 @@ while (...){
 
 Corresponding graph:
 
-![Graph for example 3](../../cfpq-paths-app/src/main/resources/figures/graph_3.dot.svg)
+![Graph for example 3](assets/graph_3.dot.svg)
 
 Part of the resulting SPPF:
 
-![SPPF for example 3](../../cfpq-paths-app/src/main/resources/figures/graph_3_sppf.dot.svg)
+![SPPF for example 3](assets/graph_3_sppf.dot.svg)
 
 This SPPF also contains a cycle on vertices 3–5–7–11; therefore, infinitely many paths of interest exist. Only a sample
 is listed below.
@@ -336,7 +336,7 @@ r.q = new P()
 
 Corresponding graph:
 
-![Graph for example 4](../../cfpq-paths-app/src/main/resources/figures/graph_4.dot.svg)
+![Graph for example 4](assets/graph_4.dot.svg)
 
 For this example, the SPPF figure is omitted due to size; only the extracted paths are listed. The query uses two start
 vertices: 1 and 8.

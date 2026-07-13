@@ -42,7 +42,7 @@ class AnBnGrammar : Grammar() {
 ```
 2) Load the graph
 
-![example_1_graph.dot](../../cfpq-paths-app/src/main/resources/figures/example_1_graph.dot.svg)
+![example_1_graph.dot](assets/example_1_graph.dot.svg)
 ```kotlin
 fun main() {
     listOf("example_1_graph.dot").forEach { graphName ->
@@ -55,11 +55,11 @@ fun main() {
 }
 ```
 3) Inspect results from SPPF
-   ![Results as SPPF](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf.dot.svg)
+   ![Results as SPPF](assets/example_1_graph_sppf.dot.svg)
    SPPF contains a compressed representation of set of paths:
 
-![Path 1 Extracted From SPPF](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_1extraction.dot.svg)
-![Path 2 Extracted From SPPF](../../cfpq-paths-app/src/main/resources/figures/example_1_graph_sppf_2extraction.dot.svg)
+![Path 1 Extracted From SPPF](assets/example_1_graph_sppf_1extraction.dot.svg)
+![Path 2 Extracted From SPPF](assets/example_1_graph_sppf_2extraction.dot.svg)
 
 > [!NOTE]
 > At this stage of using UCFS, we get compressed representation of the entire set of extractable paths, and if you need to work with them further, you can add custom
