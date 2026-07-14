@@ -55,8 +55,8 @@ The start non-terminal $S$ expands to either the terminal string $ab$ or the str
 
 The following words satisfy the grammar:
 
-* $ab$ (0 -a-> 1 -b-> 2)
-* $aabb$ (0 -a-> 1 -a-> 2 -b-> 1 -b-> 2)
+* $ab$ — $0 \xrightarrow{a} 1 \xrightarrow{b} 2$
+* $aabb$ — $0 \xrightarrow{a} 1 \xrightarrow{a} 2 \xrightarrow{b} 1 \xrightarrow{b} 2$
 
 **Resulting SPPF graph:**
 
@@ -86,8 +86,8 @@ The result matches the expected language.
 
 Examples of words that satisfy the grammar:
 
-* $ab$ (0 -a-> 1 -b-> 1)
-* $aaabbb$ (0 -a-> 1 -a-> 0 -a-> 1 -b-> 1 -b-> 1 -b-> 1)
+* $ab$ — $0 \xrightarrow{a} 1 \xrightarrow{b} 1$
+* $aaabbb$ — $0 \xrightarrow{a} 1 \xrightarrow{a} 0 \xrightarrow{a} 1 \xrightarrow{b} 1 \xrightarrow{b} 1 \xrightarrow{b} 1$
 * ...
 
 > [!NOTE]
@@ -137,9 +137,9 @@ The result matches the expected language.
 
 Examples of words that satisfy the grammar:
 
-* $ab$ (1 -a-> 2 -b-> 3)
-* $aabb$ (0 -a-> 1 -a-> 2 -b-> 3 -b-> 2)
-* $aaabbb$ (2 -a-> 0 -a-> 1 -a-> 2 -b-> 3 -b-> 2 -b-> 3)
+* $ab$ — $1 \xrightarrow{a} 2 \xrightarrow{b} 3$
+* $aabb$ — $0 \xrightarrow{a} 1 \xrightarrow{a} 2 \xrightarrow{b} 3 \xrightarrow{b} 2$
+* $aaabbb$ — $2 \xrightarrow{a} 0 \xrightarrow{a} 1 \xrightarrow{a} 2 \xrightarrow{b} 3 \xrightarrow{b} 2 \xrightarrow{b} 3$
 * ...
 
 > [!NOTE]
@@ -207,17 +207,17 @@ to recovering field assignments.
 
 Extracted paths:
 
-* [(1-PointsTo->0)]
+* $1 \xrightarrow{\text{PointsTo}} 0$
 
-  This path is trivial. Such paths will be omitted in further examples.
+   This path is trivial. Such paths will be omitted in further examples.
 
-* [(1-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $1 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  This path corresponds to ```n.u = new Y()```. Vertex 2 is an alias of 1 (```n```); the ```store_0``` edge models ```l.u = y```.
+   This path corresponds to ```n.u = new Y()```. Vertex 2 is an alias of 1 (```n```); the ```store_0``` edge models ```l.u = y```.
 
-* [(1-Alias->2), (2-store_0->3), (3-Alias->5), (5-store_1->6), (6-PointsTo->7)]
+* $1 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 5 \xrightarrow{\text{store}_1} 6 \xrightarrow{\text{PointsTo}} 7$
 
-  This path corresponds to ```n.u.v = new Z()```.
+   This path corresponds to ```n.u.v = new Z()```.
 
 ## Example 2
 
@@ -243,29 +243,29 @@ Part of the resulting SPPF:
 This fragment contains a cycle on vertices 27–31–34–37–38–40–42–44–47–49–52–56 (shown in red), indicating infinitely
 many paths of interest. A sample of extracted paths:
 
-* [(0-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next = new X () // line 4```
+   ```n.next = new X () // line 4```
 
-* [(0-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next.next = new X () // line 4```
+   ```n.next.next = new X () // line 4```
 
-* [(0-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next.next.next = new X () // line 4```
+   ```n.next.next.next = new X () // line 4```
 
-* [(0-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next.next.next.next = new X () // line 4```
+   ```n.next.next.next.next = new X () // line 4```
 
-* [(0-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next.next.next.next.next = new X () // line 4```
+   ```n.next.next.next.next.next = new X () // line 4```
 
-* [(0-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+* $0 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
 
-  ```n.next.next.next.next.next.next = new X () // line 4```
+   ```n.next.next.next.next.next.next = new X () // line 4```
 
 More paths can be extracted if needed. Traversal should be tuned accordingly.
 
@@ -294,29 +294,29 @@ Part of the resulting SPPF:
 This SPPF also contains a cycle on vertices 3–5–7–11; therefore, infinitely many paths of interest exist. Only a sample
 is listed below.
 
-* [(0-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next = new X() // line 4```
+   ```n.next = new X() // line 4```
 
-* [(0-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next.next = new X() // line 4```
+   ```n.next.next = new X() // line 4```
 
-* [(0-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next.next.next = new X() // line 4```
+   ```n.next.next.next = new X() // line 4```
 
-* [(0-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next.next.next.next = new X() // line 4```
+   ```n.next.next.next.next = new X() // line 4```
 
-* [(0-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next.next.next.next.next = new X() // line 4```
+   ```n.next.next.next.next.next = new X() // line 4```
 
-* [(0-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-Alias->1), (1-store_0->2), (2-PointsTo->3)]
+* $0 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{Alias}} 1 \xrightarrow{\text{store}_0} 2 \xrightarrow{\text{PointsTo}} 3$
 
-  ```n.next.next.next.next.next.next = new X() // line 4```
+   ```n.next.next.next.next.next.next = new X() // line 4```
 
 ## Example 4
 
@@ -341,23 +341,23 @@ Corresponding graph:
 For this example, the SPPF figure is omitted due to size; only the extracted paths are listed. The query uses two start
 vertices: 1 and 8.
 
-* [(1-Alias->9), (9-store_3->11), (11-PointsTo->13)]
+* $1 \xrightarrow{\text{Alias}} 9 \xrightarrow{\text{store}_3} 11 \xrightarrow{\text{PointsTo}} 13$
 
-  ```n.q = new P()```
+   ```n.q = new P()```
 
-* [(1-Alias->8), (8-store_2->10), (10-PointsTo->12)]
+* $1 \xrightarrow{\text{Alias}} 8 \xrightarrow{\text{store}_2} 10 \xrightarrow{\text{PointsTo}} 12$
 
-  ```n.p = new Y() ```
+   ```n.p = new Y() ```
 
-* [(8-Alias->9), (9-store_3->11), (11-PointsTo->13)]
+* $8 \xrightarrow{\text{Alias}} 9 \xrightarrow{\text{store}_3} 11 \xrightarrow{\text{PointsTo}} 13$
 
-  ```v.q = new P() ```
+   ```v.q = new P() ```
 
-* [(8-store_2->10), (10-PointsTo->12)]
+* $8 \xrightarrow{\text{store}_2} 10 \xrightarrow{\text{PointsTo}} 12$
 
-  ```v.p = new Y() ```
+   ```v.p = new Y() ```
 
-* [(8-Alias->8), (8-store_2->10), (10-PointsTo->12)]
+* $8 \xrightarrow{\text{Alias}} 8 \xrightarrow{\text{store}_2} 10 \xrightarrow{\text{PointsTo}} 12$
 
-  ```v.p = new Y() ```
+   ```v.p = new Y() ```
 
