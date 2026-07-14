@@ -1,3 +1,6 @@
+# Tests output
+./test-shared/gen/
+
 # Log file
 *.log
 *.logs

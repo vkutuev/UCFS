@@ -1,5 +1,10 @@
 # UCFS
 
+[![CI](https://github.com/FormalLanguageConstrainedPathQuerying/UCFS/actions/workflows/ci-test-infrastructure.yaml/badge.svg)](https://github.com/FormalLanguageConstrainedPathQuerying/UCFS/actions/workflows/ci-test-infrastructure.yaml)
+[![License](https://img.shields.io/github/license/FormalLanguageConstrainedPathQuerying/UCFS)](LICENSE)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.4.0-blue.svg?logo=kotlin)](https://kotlinlang.org)
+[![JDK](https://img.shields.io/badge/JDK-11%2B-orange.svg?logo=openjdk)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+
 > Note: project under heavy development!
 
 Please, see [documentation](https://formallanguageconstrainedpathquerying.github.io/UCFS/) for details.
@@ -7,19 +12,28 @@ Please, see [documentation](https://formallanguageconstrainedpathquerying.github
 ## What is UCFS?
 
 UCFS is an **U**niversal **C**ontext-**F**ree **S**olver: a GLL‑based tool for problems at the intersection of
-context‑free languages
-over edge‑labeled directed graphs. Examples of such problems:
+context‑free languages over edge‑labeled directed graphs. Examples of such problems:
 
 - Parsing
 - Context-free path querying (CFPQ)
 - Context-free language reachability (CFL-R)
-- static code analysis
+- Static code analysis
 
 **Highlights**
 
 * Kotlin implementation with a concise Grammar DSL (EBNF‑friendly).
 * Input: arbitrary edge‑labeled directed graphs.
-* Output: SPPF -- finite structure for all‑paths queries.
+* Output: SPPF — finite structure for all‑paths queries.
+
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [Core Algorithm](#core-algorithm)
+- [Repository Layout](#repository-layout-high-level)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
 
 ### Typical workflow
 
@@ -86,7 +100,7 @@ cfpq-paths-app/    # Runnable demos and tutorial
 - JDK 11+ (toolchain targets 11).
 - Gradle Wrapper included (`./gradlew`).
 
-### Installation:
+## Installation
 
 * To download the project by **https** enter
 
@@ -99,3 +113,17 @@ git clone https://github.com/FormalLanguageConstrainedPathQuerying/UCFS.git
 ```bash
 git clone git@github.com:FormalLanguageConstrainedPathQuerying/UCFS.git
 ```
+
+## Documentation
+
+- [User Guide](https://formallanguageconstrainedpathquerying.github.io/UCFS/) — Grammar DSL, SPPF, graph formats, usage examples
+- [Architecture](dev/ARCHITECTURE.md) — Module structure, data flow, key abstractions
+- [Development Guide](dev/DEVELOPMENT.md) — Local setup, build commands, running examples
+
+## Contributing
+
+We welcome contributions! Please see:
+
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Changelog](CHANGELOG.md)
