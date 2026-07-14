@@ -72,6 +72,15 @@ graph TD
 - **Unified style:** All documentation follows a consistent structure: purpose → prerequisites → content → cross-references
 - **Developer docs:** Place in `dev/` directory; user-facing docs go to `docs/docs/`
 
+## Agent Workflow Rules
+
+> **Documentation-first policy:** Any structural or behavioral change must be reflected in the agent documentation *before* implementation.
+
+1. Update relevant files in `dev/` (and `AGENTS.md`) to reflect the intended change
+2. **Ask the user to approve the documentation changes**
+3. Only after approval, commit the documentation changes
+4. Then implement the actual code changes
+
 ## Key Source Files
 
 | File | Purpose |
