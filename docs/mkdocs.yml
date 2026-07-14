@@ -1,5 +1,11 @@
 site_name: Universal Context-Free Solver
 site_url: https://formallanguageconstrainedpathquerying.github.io/UCFS/
+nav:
+  - Home: index.md
+  - DSL: dsl.md
+  - Graphs: graphs.md
+  - SPPF: sppf.md
+  - Examples: usage-examples.md
 theme:
   name: material
 

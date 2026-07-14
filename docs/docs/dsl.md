@@ -74,7 +74,7 @@ val B = Term(42)
 ```
 * Terminals are compared based on their content value.
 * Initialization:
-  * * as fields of grammar class, can be reused `val a = Temr("A")`;
+  * * as fields of grammar class, can be reused `val a = Term("A")`;
   * * directly in production `BA \= Term("B") * Term("A")`.
 * Strings can be handled without wrapping. For instance, `digit \= "1" or "0"`.
 
