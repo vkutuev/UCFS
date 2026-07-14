@@ -57,6 +57,27 @@ docs/
 - **Embedding:** Reference from markdown with `![Alt text](assets/filename.svg)`.
 - **Alt text:** Brief description of what the diagram shows.
 
+### Paths
+
+Represent paths using TeX `\xrightarrow{}` notation, **not** ASCII edge lists.
+
+**Correct:**
+```markdown
+$0 \xrightarrow{a} 1 \xrightarrow{b} 2$
+$1 \xrightarrow{\text{Alias}} 2 \xrightarrow{\text{store}_0} 3 \xrightarrow{\text{PointsTo}} 4$
+```
+
+**Incorrect:**
+```markdown
+(0 -a-> 1 -b-> 2)
+[(1-Alias->2), (2-store_0->3), (3-PointsTo->4)]
+```
+
+Rules:
+- Simple labels: `\xrightarrow{a}`
+- Multi-word labels: `\xrightarrow{\text{PointsTo}}`
+- Labels with subscripts: `\xrightarrow{\text{store}_0}`
+
 ### Code Examples
 
 - Show complete, runnable snippets when possible.
@@ -110,4 +131,5 @@ nav:
 - **Don't** duplicate content between pages — use cross-references instead.
 - **Don't** embed large ASCII diagrams — use SVG or Mermaid.
 - **Don't** reference internal API without explaining what it does for the user.
+- **Don't** use ASCII edge lists like `[(v-label->u)]` — always use TeX `$\xrightarrow{}$`.
 - **Don't** omit the working directory for shell commands.
