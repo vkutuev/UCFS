@@ -4,7 +4,7 @@ import org.ucfs.grammar.combinator.Grammar
 import org.ucfs.grammar.combinator.extension.StringExtension.or
 import org.ucfs.grammar.combinator.extension.StringExtension.times
 import org.ucfs.grammar.combinator.regexp.Nt
-import org.ucfs.grammar.combinator.regexp.Option
+import org.ucfs.grammar.combinator.regexp.option
 import org.ucfs.grammar.combinator.regexp.many
 import org.ucfs.grammar.combinator.regexp.or
 import org.ucfs.input.DotParser
@@ -31,7 +31,7 @@ class PointsToGrammar : Grammar() {
     
     init {
         Alias /= PointsTo * FlowsTo
-        S /= many( Option(Alias) * ("store_0" or "store_1" or "store_2" or "store_3")) * PointsTo
+        S /= many( option(Alias) * ("store_0" or "store_1" or "store_2" or "store_3")) * PointsTo
     }
 }
 

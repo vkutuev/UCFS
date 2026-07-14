@@ -30,4 +30,4 @@ data class Alternative(
 
 infix fun Regexp.or(other: Regexp): Regexp = Alternative.makeAlternative(left = this, other)
 
-fun Option(exp: Regexp) = Alternative.makeAlternative(Epsilon, exp)
+fun option(exp: Regexp) = Alternative.makeAlternative(Epsilon, exp)

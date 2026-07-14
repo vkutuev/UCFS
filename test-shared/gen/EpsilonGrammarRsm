@@ -1,0 +1,7 @@
+digraph g {
+S_0 [label = "S,S_0", shape = doublecircle, color = green]
+subgraph cluster_S {
+S_0
+label = "S"
+}
+}

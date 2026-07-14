@@ -1,6 +1,6 @@
 package org.ucfs.grammar.combinator.regexp
 
-data class Many(
+data class Many internal constructor(
     val exp: Regexp,
 ) : Regexp {
     override fun derive(symbol: DerivedSymbol): Regexp {
@@ -14,10 +14,6 @@ data class Many(
     }
 }
 
-fun many(some: Regexp): Many {
-    return Many(some)
-}
-val Regexp.many: Many
-    get() = Many(this)
+fun many(some: Regexp): Regexp = Many(some)
 
-fun some(exp: Regexp) = exp * Many(exp)
+fun some(exp: Regexp) = exp * many(exp)

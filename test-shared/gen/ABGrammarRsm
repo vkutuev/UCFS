@@ -1,0 +1,35 @@
+digraph g {
+B_1 [label = "B,B_1", shape = doublecircle, color = red]
+C_1 [label = "C,C_1", shape = doublecircle, color = red]
+A_1 [label = "A,A_1", shape = doublecircle, color = red]
+C_0 [label = "C,C_0", shape = circle, color = green]
+B_0 [label = "B,B_0", shape = circle, color = green]
+A_0 [label = "A,A_0", shape = circle, color = green]
+S_1 [label = "S,S_1", shape = doublecircle, color = red]
+S_0 [label = "S,S_0", shape = circle, color = green]
+C_0 -> C_1 [label = "a"]
+B_0 -> B_1 [label = "C"]
+A_0 -> A_1 [label = "a"]
+S_0 -> S_1 [label = "A"]
+S_0 -> S_1 [label = "B"]
+subgraph cluster_A {
+A_1
+A_0
+label = "A"
+}
+subgraph cluster_B {
+B_1
+B_0
+label = "B"
+}
+subgraph cluster_C {
+C_1
+C_0
+label = "C"
+}
+subgraph cluster_S {
+S_1
+S_0
+label = "S"
+}
+}

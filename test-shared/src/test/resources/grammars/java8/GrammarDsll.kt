@@ -227,26 +227,26 @@ class GrammarDsl : Grammar() {
          * Productions from §4 (Types, Values, and Variables)
          */
         Type = PrimitiveType or ReferenceType
-        PrimitiveType = Many(Annotation) * NumericType or Many(Annotation) * Token.BOOLEAN
+        PrimitiveType = many(Annotation) * NumericType or many(Annotation) * Token.BOOLEAN
         NumericType = IntegralType or FloatingPointType
         IntegralType = Token.BYTE or Token.SHORT or Token.INT or Token.LONG or Token.CHAR
         FloatingPointType = Token.FLOAT or Token.DOUBLE
         ReferenceType = ClassOrInterfaceType or TypeVariable or ArrayType
         ClassOrInterfaceType = ClassType or InterfaceType
-        ClassType = Many(Annotation) * Identifier * Option(TypeArguments) or
-                ClassOrInterfaceType * Token.DOT * Many(Annotation) * Identifier * Option(TypeArguments)
+        ClassType = many(Annotation) * Identifier * option(TypeArguments) or
+                ClassOrInterfaceType * Token.DOT * many(Annotation) * Identifier * option(TypeArguments)
         InterfaceType = ClassType
-        TypeVariable = Many(Annotation) * Identifier
+        TypeVariable = many(Annotation) * Identifier
         ArrayType = PrimitiveType * Dims or ClassOrInterfaceType * Dims or TypeVariable * Dims
-        Dims = Some(Many(Annotation) * Token.BRACKETLEFT * Token.BRACKETRIGHT)
-        TypeParameter  = Many(TypeParameterModifier) * Identifier * Option(TypeBound)
+        Dims = some(many(Annotation) * Token.BRACKETLEFT * Token.BRACKETRIGHT)
+        TypeParameter  = many(TypeParameterModifier) * Identifier * option(TypeBound)
         TypeParameterModifier = Annotation
-        TypeBound = Token.EXTENDS * TypeVariable or Token.EXTENDS * ClassOrInterfaceType * Many(AdditionalBound)
+        TypeBound = Token.EXTENDS * TypeVariable or Token.EXTENDS * ClassOrInterfaceType * many(AdditionalBound)
         AdditionalBound = Token.ANDBIT * InterfaceType
         TypeArguments = Token.LT * TypeArgumentList * Token.GT
-        TypeArgumentList = TypeArgument * Many(Token.COMMA * TypeArgument)
+        TypeArgumentList = TypeArgument * many(Token.COMMA * TypeArgument)
         TypeArgument = ReferenceType or Wildcard
-        Wildcard = Many(Annotation) * Token.QUESTIONMARK * Option(WildcardBounds)
+        Wildcard = many(Annotation) * Token.QUESTIONMARK * option(WildcardBounds)
         WildcardBounds = Token.EXTENDS * ReferenceType or Token.SUPER * ReferenceType
 
         /**
@@ -264,8 +264,8 @@ class GrammarDsl : Grammar() {
          * Productions from §7 (Packages)
          */
 
-        CompilationUnit = Option(PackageDeclaration) * Many(ImportDeclaration) * Many(TypeDeclaration)
-        PackageDeclaration = Many(PackageModifier) * Token.PACKAGE * Identifier * Many(Token.DOT * Identifier) * Token.SEMICOLON
+        CompilationUnit = option(PackageDeclaration) * many(ImportDeclaration) * many(TypeDeclaration)
+        PackageDeclaration = many(PackageModifier) * Token.PACKAGE * Identifier * many(Token.DOT * Identifier) * Token.SEMICOLON
         PackageModifier = Annotation
         ImportDeclaration = SingleTypeImportDeclaration or TypeImportOnDemandDeclaration or
                 SingleStaticImportDeclaration or StaticImportOnDemandDeclaration
@@ -280,70 +280,70 @@ class GrammarDsl : Grammar() {
          */
 
         ClassDeclaration = NormalClassDeclaration or EnumDeclaration
-        NormalClassDeclaration = Many(ClassModifier) * Token.CLASS * Identifier *
-                Option(TypeParameters) * Option(Superclass) * Option(Superinterfaces) * ClassBody
+        NormalClassDeclaration = many(ClassModifier) * Token.CLASS * Identifier *
+                option(TypeParameters) * option(Superclass) * option(Superinterfaces) * ClassBody
         ClassModifier = Annotation or Token.PUBLIC or Token.PROTECTED or Token.PRIVATE or
                 Token.ABSTRACT or Token.STATIC or Token.FINAL or Token.STRICTFP
         TypeParameters = Token.LT * TypeParameterList * Token.GT
-        TypeParameterList = TypeParameter  * Many(Token.COMMA * TypeParameter)
+        TypeParameterList = TypeParameter  * many(Token.COMMA * TypeParameter)
         Superclass = Token.EXTENDS * ClassType
         Superinterfaces = Token.IMPLEMENTS * InterfaceTypeList
-        InterfaceTypeList = InterfaceType  * Many(Token.COMMA * InterfaceType)
-        ClassBody = Token.CURLYLEFT * Many(ClassBodyDeclaration) * Token.CURLYRIGHT
+        InterfaceTypeList = InterfaceType  * many(Token.COMMA * InterfaceType)
+        ClassBody = Token.CURLYLEFT * many(ClassBodyDeclaration) * Token.CURLYRIGHT
         ClassBodyDeclaration = ClassMemberDeclaration or InstanceInitializer or StaticInitializer or ConstructorDeclaration
         ClassMemberDeclaration = FieldDeclaration or MethodDeclaration or ClassDeclaration or InterfaceDeclaration or Token.SEMICOLON
-        FieldDeclaration = Many(FieldModifier) * UnannType * VariableDeclaratorList * Token.SEMICOLON
+        FieldDeclaration = many(FieldModifier) * UnannType * VariableDeclaratorList * Token.SEMICOLON
         FieldModifier = Annotation or Token.PUBLIC or Token.PROTECTED or Token.PRIVATE or Token.STATIC or
                 Token.FINAL or Token.TRANSIENT or Token.VOLATILE
-        VariableDeclaratorList = VariableDeclarator * Many(Token.COMMA * VariableDeclarator)
-        VariableDeclarator = VariableDeclaratorId * Option(Token.ASSIGN * VariableInitializer)
-        VariableDeclaratorId = Identifier * Option(Dims)
+        VariableDeclaratorList = VariableDeclarator * many(Token.COMMA * VariableDeclarator)
+        VariableDeclarator = VariableDeclaratorId * option(Token.ASSIGN * VariableInitializer)
+        VariableDeclaratorId = Identifier * option(Dims)
         VariableInitializer = Expression or ArrayInitializer
         UnannType = UnannPrimitiveType or UnannReferenceType
         UnannPrimitiveType = NumericType or Token.BOOLEAN
         UnannReferenceType = UnannClassOrInterfaceType or UnannTypeVariable or UnannArrayType
         UnannClassOrInterfaceType = UnannClassType or UnannInterfaceType
-        UnannClassType = Identifier * Option(TypeArguments) or
-                UnannClassOrInterfaceType * Token.DOT * Many(Annotation) * Identifier * Option(TypeArguments)
+        UnannClassType = Identifier * option(TypeArguments) or
+                UnannClassOrInterfaceType * Token.DOT * many(Annotation) * Identifier * option(TypeArguments)
         UnannInterfaceType = UnannClassType
         UnannTypeVariable = Identifier
         UnannArrayType = UnannPrimitiveType * Dims or UnannClassOrInterfaceType * Dims or UnannTypeVariable * Dims
-        MethodDeclaration = Many(MethodModifier) * MethodHeader * MethodBody
+        MethodDeclaration = many(MethodModifier) * MethodHeader * MethodBody
         MethodModifier = Annotation or Token.PUBLIC or Token.PROTECTED or Token.PRIVATE or Token.ABSTRACT or
                 Token.STATIC or Token.FINAL or Token.SYNCHRONIZED or Token.NATIVE or Token.STRICTFP
-        MethodHeader = Result * MethodDeclarator * Option(Throws) or
-                TypeParameters * Many(Annotation) * Result * MethodDeclarator * Option(Throws)
+        MethodHeader = Result * MethodDeclarator * option(Throws) or
+                TypeParameters * many(Annotation) * Result * MethodDeclarator * option(Throws)
         Result = UnannType or Token.VOID
-        MethodDeclarator = Identifier * Token.PARENTHLEFT * Option(FormalParameterList) * Token.PARENTHRIGHT * Option(Dims)
+        MethodDeclarator = Identifier * Token.PARENTHLEFT * option(FormalParameterList) * Token.PARENTHRIGHT * option(Dims)
         FormalParameterList = ReceiverParameter or FormalParameters * Token.COMMA * LastFormalParameter or
                 LastFormalParameter
-        FormalParameters = FormalParameter * Many(Token.COMMA * FormalParameter) or
-                ReceiverParameter * Many(Token.COMMA * FormalParameter)
-        FormalParameter = Many(VariableModifier) * UnannType * VariableDeclaratorId
+        FormalParameters = FormalParameter * many(Token.COMMA * FormalParameter) or
+                ReceiverParameter * many(Token.COMMA * FormalParameter)
+        FormalParameter = many(VariableModifier) * UnannType * VariableDeclaratorId
         VariableModifier = Annotation or Token.FINAL
-        LastFormalParameter = Many(VariableModifier) * UnannType * Many(Annotation) * Token.ELLIPSIS * VariableDeclaratorId or FormalParameter
-        ReceiverParameter = Many(Annotation) * UnannType * Option(Identifier * Token.DOT) * Token.THIS
+        LastFormalParameter = many(VariableModifier) * UnannType * many(Annotation) * Token.ELLIPSIS * VariableDeclaratorId or FormalParameter
+        ReceiverParameter = many(Annotation) * UnannType * option(Identifier * Token.DOT) * Token.THIS
         Throws = Token.THROWS * ExceptionTypeList
-        ExceptionTypeList = ExceptionType * Many(Token.COMMA * ExceptionType)
+        ExceptionTypeList = ExceptionType * many(Token.COMMA * ExceptionType)
         ExceptionType = ClassType or TypeVariable
         MethodBody = Block or Token.SEMICOLON
         InstanceInitializer = Block
         StaticInitializer = Token.STATIC * Block
-        ConstructorDeclaration = Many(ConstructorModifier) * ConstructorDeclarator * Option(Throws) * ConstructorBody
+        ConstructorDeclaration = many(ConstructorModifier) * ConstructorDeclarator * option(Throws) * ConstructorBody
         ConstructorModifier = Annotation or Token.PUBLIC or Token.PROTECTED or Token.PRIVATE
-        ConstructorDeclarator = Option(TypeParameters) * SimpleTypeName * Token.PARENTHLEFT * Option(FormalParameterList) * Token.PARENTHRIGHT
+        ConstructorDeclarator = option(TypeParameters) * SimpleTypeName * Token.PARENTHLEFT * option(FormalParameterList) * Token.PARENTHRIGHT
         SimpleTypeName = Identifier
-        ConstructorBody = Token.CURLYLEFT * Option(ExplicitConstructorInvocation) * Option(BlockStatements) * Token.CURLYRIGHT
-        ExplicitConstructorInvocation = Option(TypeArguments) * Token.THIS * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
-                Option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
-                ExpressionName * Token.DOT * Option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
-                Primary * Token.DOT * Option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON
-        EnumDeclaration = Many(ClassModifier) * Token.ENUM * Identifier * Option(Superinterfaces) * EnumBody
-        EnumBody = Token.CURLYLEFT * Option(EnumConstantList) * Option(Token.COMMA) * Option(EnumBodyDeclarations) * Token.CURLYRIGHT
-        EnumConstantList = EnumConstant * Many(Token.COMMA * EnumConstant)
-        EnumConstant = Many(EnumConstantModifier) * Identifier * Option(Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Option(ClassBody))
+        ConstructorBody = Token.CURLYLEFT * option(ExplicitConstructorInvocation) * option(BlockStatements) * Token.CURLYRIGHT
+        ExplicitConstructorInvocation = option(TypeArguments) * Token.THIS * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
+                option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
+                ExpressionName * Token.DOT * option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON or
+                Primary * Token.DOT * option(TypeArguments) * Token.SUPER * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * Token.SEMICOLON
+        EnumDeclaration = many(ClassModifier) * Token.ENUM * Identifier * option(Superinterfaces) * EnumBody
+        EnumBody = Token.CURLYLEFT * option(EnumConstantList) * option(Token.COMMA) * option(EnumBodyDeclarations) * Token.CURLYRIGHT
+        EnumConstantList = EnumConstant * many(Token.COMMA * EnumConstant)
+        EnumConstant = many(EnumConstantModifier) * Identifier * option(Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * option(ClassBody))
         EnumConstantModifier = Annotation
-        EnumBodyDeclarations = Token.SEMICOLON * Many(ClassBodyDeclaration)
+        EnumBodyDeclarations = Token.SEMICOLON * many(ClassBodyDeclaration)
 
         /**
          * Productions from §9 (Interfaces)
@@ -351,30 +351,30 @@ class GrammarDsl : Grammar() {
 
         InterfaceDeclaration = NormalInterfaceDeclaration or AnnotationTypeDeclaration
         NormalInterfaceDeclaration =
-            Many(InterfaceModifier) * Token.INTERFACE * Identifier * Option(TypeParameters) * Option(ExtendsInterfaces) * InterfaceBody
+            many(InterfaceModifier) * Token.INTERFACE * Identifier * option(TypeParameters) * option(ExtendsInterfaces) * InterfaceBody
         InterfaceModifier = Annotation or Token.PUBLIC or Token.PROTECTED or Token.PRIVATE or
                 Token.ABSTRACT or Token.STATIC or Token.STRICTFP
         ExtendsInterfaces = Token.EXTENDS * InterfaceTypeList
-        InterfaceBody = Token.CURLYLEFT * Many(InterfaceMemberDeclaration) * Token.CURLYRIGHT
+        InterfaceBody = Token.CURLYLEFT * many(InterfaceMemberDeclaration) * Token.CURLYRIGHT
         InterfaceMemberDeclaration = ConstantDeclaration or InterfaceMethodDeclaration or ClassDeclaration or InterfaceDeclaration or Token.SEMICOLON
-        ConstantDeclaration = Many(ConstantModifier) * UnannType * VariableDeclaratorList * Token.SEMICOLON
+        ConstantDeclaration = many(ConstantModifier) * UnannType * VariableDeclaratorList * Token.SEMICOLON
         ConstantModifier = Annotation or Token.PUBLIC or Token.STATIC or Token.FINAL
-        InterfaceMethodDeclaration = Many(InterfaceMethodModifier) * MethodHeader * MethodBody
+        InterfaceMethodDeclaration = many(InterfaceMethodModifier) * MethodHeader * MethodBody
         InterfaceMethodModifier = Annotation or Token.PUBLIC or Token.ABSTRACT or Token.DEFAULT or Token.STATIC or Token.STRICTFP
-        AnnotationTypeDeclaration = Many(InterfaceModifier) * Token.AT * Token.INTERFACE * Identifier * AnnotationTypeBody
-        AnnotationTypeBody = Token.CURLYLEFT * Many(AnnotationTypeMemberDeclaration) * Token.CURLYRIGHT
+        AnnotationTypeDeclaration = many(InterfaceModifier) * Token.AT * Token.INTERFACE * Identifier * AnnotationTypeBody
+        AnnotationTypeBody = Token.CURLYLEFT * many(AnnotationTypeMemberDeclaration) * Token.CURLYRIGHT
         AnnotationTypeMemberDeclaration = AnnotationTypeElementDeclaration or ConstantDeclaration or ClassDeclaration or InterfaceDeclaration or Token.SEMICOLON
         AnnotationTypeElementDeclaration =
-            Many(AnnotationTypeElementModifier) * UnannType * Identifier * Token.PARENTHLEFT * Token.PARENTHRIGHT * Option(Dims) * Option(DefaultValue) * Token.SEMICOLON
+            many(AnnotationTypeElementModifier) * UnannType * Identifier * Token.PARENTHLEFT * Token.PARENTHRIGHT * option(Dims) * option(DefaultValue) * Token.SEMICOLON
         AnnotationTypeElementModifier = Annotation or Token.PUBLIC or Token.ABSTRACT
         DefaultValue = Token.DEFAULT * ElementValue
         Annotation = NormalAnnotation or MarkerAnnotation or SingleElementAnnotation
-        NormalAnnotation = Token.AT * TypeName * Token.PARENTHLEFT * Option(ElementValuePairList) * Token.PARENTHRIGHT
-        ElementValuePairList = ElementValuePair * Many(Token.COMMA * ElementValuePair)
+        NormalAnnotation = Token.AT * TypeName * Token.PARENTHLEFT * option(ElementValuePairList) * Token.PARENTHRIGHT
+        ElementValuePairList = ElementValuePair * many(Token.COMMA * ElementValuePair)
         ElementValuePair = Identifier * Token.ASSIGN * ElementValue
         ElementValue = ConditionalExpression or ElementValueArrayInitializer or Annotation
-        ElementValueArrayInitializer = Token.CURLYLEFT * Option(ElementValueList) * Option(Token.COMMA) * Token.CURLYRIGHT
-        ElementValueList = ElementValue * Many(Token.COMMA * ElementValue)
+        ElementValueArrayInitializer = Token.CURLYLEFT * option(ElementValueList) * option(Token.COMMA) * Token.CURLYRIGHT
+        ElementValueList = ElementValue * many(Token.COMMA * ElementValue)
         MarkerAnnotation = Token.AT * TypeName
         SingleElementAnnotation = Token.AT * TypeName * Token.PARENTHLEFT * ElementValue * Token.PARENTHRIGHT
 
@@ -382,18 +382,18 @@ class GrammarDsl : Grammar() {
          * Productions from §10 (Arrays)
          */
 
-        ArrayInitializer = Token.CURLYLEFT * Option(VariableInitializerList) * Option(Token.COMMA) * Token.CURLYRIGHT
-        VariableInitializerList = VariableInitializer * Many(Token.COMMA * VariableInitializer)
+        ArrayInitializer = Token.CURLYLEFT * option(VariableInitializerList) * option(Token.COMMA) * Token.CURLYRIGHT
+        VariableInitializerList = VariableInitializer * many(Token.COMMA * VariableInitializer)
 
         /**
          * Productions from §14 (Blocks and Statements)
          */
 
-        Block = Token.CURLYLEFT * Option(BlockStatements) * Token.CURLYRIGHT
-        BlockStatements = BlockStatement * Many(BlockStatement)
+        Block = Token.CURLYLEFT * option(BlockStatements) * Token.CURLYRIGHT
+        BlockStatements = BlockStatement * many(BlockStatement)
         BlockStatement = LocalVariableDeclarationStatement or ClassDeclaration or Statement
         LocalVariableDeclarationStatement = LocalVariableDeclaration * Token.SEMICOLON
-        LocalVariableDeclaration = Many(VariableModifier) * UnannType * VariableDeclaratorList
+        LocalVariableDeclaration = many(VariableModifier) * UnannType * VariableDeclaratorList
         Statement = StatementWithoutTrailingSubstatement or LabeledStatement or IfThenStatement or IfThenElseStatement or
                 WhileStatement or ForStatement
         StatementNoShortIf = StatementWithoutTrailingSubstatement or LabeledStatementNoShortIf or IfThenElseStatementNoShortIf or
@@ -414,9 +414,9 @@ class GrammarDsl : Grammar() {
         AssertStatement = Token.ASSERT * Expression * Token.SEMICOLON or
                 Token.ASSERT * Expression * Token.COLON * Expression * Token.SEMICOLON
         SwitchStatement = Token.SWITCH * Token.PARENTHLEFT * Expression * Token.PARENTHRIGHT * SwitchBlock
-        SwitchBlock = Token.CURLYLEFT * Many(SwitchBlockStatementGroup) * Many(SwitchLabel) * Token.CURLYRIGHT
+        SwitchBlock = Token.CURLYLEFT * many(SwitchBlockStatementGroup) * many(SwitchLabel) * Token.CURLYRIGHT
         SwitchBlockStatementGroup = SwitchLabels * BlockStatements
-        SwitchLabels = Some(SwitchLabel)
+        SwitchLabels = some(SwitchLabel)
         SwitchLabel = Token.CASE * ConstantExpression * Token.COLON or
                 Token.CASE * EnumConstantName * Token.COLON or Token.DEFAULT * Token.COLON
         EnumConstantName = Identifier
@@ -425,28 +425,28 @@ class GrammarDsl : Grammar() {
         DoStatement = Token.DO * Statement * Token.WHILE * Token.PARENTHLEFT * Expression * Token.PARENTHRIGHT * Token.SEMICOLON
         ForStatement = BasicForStatement or EnhancedForStatement
         ForStatementNoShortIf = BasicForStatementNoShortIf or EnhancedForStatementNoShortIf
-        BasicForStatement = Token.FOR * Token.PARENTHLEFT * Option(ForInit) * Token.SEMICOLON * Option(Expression) * Token.SEMICOLON * Option(ForUpdate) * Token.PARENTHRIGHT * Statement
-        BasicForStatementNoShortIf = Token.FOR * Token.PARENTHLEFT * Option(ForInit) * Token.SEMICOLON * Option(Expression) * Token.SEMICOLON * Option(ForUpdate) * Token.PARENTHRIGHT * StatementNoShortIf
+        BasicForStatement = Token.FOR * Token.PARENTHLEFT * option(ForInit) * Token.SEMICOLON * option(Expression) * Token.SEMICOLON * option(ForUpdate) * Token.PARENTHRIGHT * Statement
+        BasicForStatementNoShortIf = Token.FOR * Token.PARENTHLEFT * option(ForInit) * Token.SEMICOLON * option(Expression) * Token.SEMICOLON * option(ForUpdate) * Token.PARENTHRIGHT * StatementNoShortIf
         ForInit = StatementExpressionList or LocalVariableDeclaration
         ForUpdate = StatementExpressionList
-        StatementExpressionList = StatementExpression * Many(Token.COMMA * StatementExpression)
-        EnhancedForStatement = Token.FOR * Token.PARENTHLEFT * Many(VariableModifier) * UnannType * VariableDeclaratorId * Token.COLON * Expression * Token.PARENTHRIGHT * Statement
-        EnhancedForStatementNoShortIf = Token.FOR * Token.PARENTHLEFT * Many(VariableModifier) * UnannType * VariableDeclaratorId * Token.COLON * Expression * Token.PARENTHRIGHT * StatementNoShortIf
-        BreakStatement = Token.BREAK * Option(Identifier) * Token.SEMICOLON
-        ContinueStatement = Token.CONTINUE * Option(Identifier) * Token.SEMICOLON
-        ReturnStatement = Token.RETURN * Option(Expression) * Token.SEMICOLON
+        StatementExpressionList = StatementExpression * many(Token.COMMA * StatementExpression)
+        EnhancedForStatement = Token.FOR * Token.PARENTHLEFT * many(VariableModifier) * UnannType * VariableDeclaratorId * Token.COLON * Expression * Token.PARENTHRIGHT * Statement
+        EnhancedForStatementNoShortIf = Token.FOR * Token.PARENTHLEFT * many(VariableModifier) * UnannType * VariableDeclaratorId * Token.COLON * Expression * Token.PARENTHRIGHT * StatementNoShortIf
+        BreakStatement = Token.BREAK * option(Identifier) * Token.SEMICOLON
+        ContinueStatement = Token.CONTINUE * option(Identifier) * Token.SEMICOLON
+        ReturnStatement = Token.RETURN * option(Expression) * Token.SEMICOLON
         ThrowStatement = Token.THROW * Expression * Token.SEMICOLON
         SynchronizedStatement = Token.SYNCHRONIZED * Token.PARENTHLEFT * Expression * Token.PARENTHRIGHT * Block
-        TryStatement = Token.TRY * Block * Catches or Token.TRY * Block * Option(Catches) * Finally or TryWithResourcesStatement
-        Catches = Some(CatchClause)
+        TryStatement = Token.TRY * Block * Catches or Token.TRY * Block * option(Catches) * Finally or TryWithResourcesStatement
+        Catches = some(CatchClause)
         CatchClause = Token.CATCH * Token.PARENTHLEFT * CatchFormalParameter * Token.PARENTHRIGHT * Block
-        CatchFormalParameter = Many(VariableModifier) * CatchType * VariableDeclaratorId
-        CatchType = UnannClassType * Many(Token.ORBIT * ClassType)
+        CatchFormalParameter = many(VariableModifier) * CatchType * VariableDeclaratorId
+        CatchType = UnannClassType * many(Token.ORBIT * ClassType)
         Finally = Token.FINALLY * Block
-        TryWithResourcesStatement = Token.TRY * ResourceSpecification * Block * Option(Catches) * Option(Finally)
-        ResourceSpecification = Token.PARENTHLEFT * ResourceList * Option(Token.SEMICOLON) * Token.PARENTHRIGHT
-        ResourceList = Resource * Many(Token.COMMA * Resource)
-        Resource = Many(VariableModifier) * UnannType * VariableDeclaratorId * Token.ASSIGN * Expression
+        TryWithResourcesStatement = Token.TRY * ResourceSpecification * Block * option(Catches) * option(Finally)
+        ResourceSpecification = Token.PARENTHLEFT * ResourceList * option(Token.SEMICOLON) * Token.PARENTHRIGHT
+        ResourceList = Resource * many(Token.COMMA * Resource)
+        Resource = many(VariableModifier) * UnannType * VariableDeclaratorId * Token.ASSIGN * Expression
 
         /**
          * Productions from §15 (Expressions)
@@ -456,46 +456,46 @@ class GrammarDsl : Grammar() {
         PrimaryNoNewArray = Literal or ClassLiteral or Token.THIS or TypeName * Token.DOT * Token.THIS or
                 Token.PARENTHLEFT * Expression * Token.PARENTHRIGHT or ClassInstanceCreationExpression or FieldAccess or
                 ArrayAccess or MethodInvocation or MethodReference
-        ClassLiteral = TypeName * Many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
-                NumericType * Many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
-                Token.BOOLEAN * Many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
+        ClassLiteral = TypeName * many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
+                NumericType * many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
+                Token.BOOLEAN * many(Token.BRACKETLEFT * Token.BRACKETRIGHT) * Token.DOT * Token.CLASS or
                 Token.VOID * Token.DOT * Token.CLASS
         ClassInstanceCreationExpression = UnqualifiedClassInstanceCreationExpression or
                 ExpressionName * Token.DOT * UnqualifiedClassInstanceCreationExpression or
                 Primary * Token.DOT * UnqualifiedClassInstanceCreationExpression
         UnqualifiedClassInstanceCreationExpression =
-            Token.NEW * Option(TypeArguments) * classOrInterfaceTypeToInstantiate * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT * Option(ClassBody)
-        classOrInterfaceTypeToInstantiate = Many(Annotation) * Identifier * Many(Token.DOT * Many(Annotation) * Identifier) * Option(TypeArgumentsOrDiamond)
+            Token.NEW * option(TypeArguments) * classOrInterfaceTypeToInstantiate * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT * option(ClassBody)
+        classOrInterfaceTypeToInstantiate = many(Annotation) * Identifier * many(Token.DOT * many(Annotation) * Identifier) * option(TypeArgumentsOrDiamond)
         TypeArgumentsOrDiamond = TypeArguments or Token.LT * Token.GT
         FieldAccess = Primary * Token.DOT * Identifier or Token.SUPER * Token.DOT * Identifier or
                 TypeName * Token.DOT * Token.SUPER * Token.DOT * Identifier
         ArrayAccess = ExpressionName * Token.BRACKETLEFT * Expression * Token.BRACKETRIGHT or
                 PrimaryNoNewArray * Token.BRACKETLEFT * Expression * Token.BRACKETRIGHT
-        MethodInvocation = MethodName * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT or
-                TypeName * Token.DOT * Option(TypeArguments) * Identifier * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT or
-                ExpressionName * Token.DOT * Option(TypeArguments) * Identifier * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT or
-                Primary * Token.DOT * Option(TypeArguments) * Identifier * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT or
-                Token.SUPER * Token.DOT * Option(TypeArguments) * Identifier * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT or
-                TypeName * Token.DOT * Token.SUPER * Token.DOT * Option(TypeArguments) * Identifier * Token.PARENTHLEFT * Option(ArgumentList) * Token.PARENTHRIGHT
-        ArgumentList = Expression * Many(Token.COMMA * Expression)
-        MethodReference = ExpressionName * Token.DOUBLECOLON * Option(TypeArguments) * Identifier or
-                ReferenceType * Token.DOUBLECOLON * Option(TypeArguments) * Identifier or
-                Primary * Token.DOUBLECOLON * Option(TypeArguments) * Identifier or
-                Token.SUPER * Token.DOUBLECOLON * Option(TypeArguments) * Identifier or
-                TypeName * Token.DOT * Token.SUPER * Token.DOUBLECOLON * Option(TypeArguments) * Identifier or
-                ClassType * Token.DOUBLECOLON * Option(TypeArguments) * Token.NEW or
+        MethodInvocation = MethodName * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT or
+                TypeName * Token.DOT * option(TypeArguments) * Identifier * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT or
+                ExpressionName * Token.DOT * option(TypeArguments) * Identifier * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT or
+                Primary * Token.DOT * option(TypeArguments) * Identifier * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT or
+                Token.SUPER * Token.DOT * option(TypeArguments) * Identifier * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT or
+                TypeName * Token.DOT * Token.SUPER * Token.DOT * option(TypeArguments) * Identifier * Token.PARENTHLEFT * option(ArgumentList) * Token.PARENTHRIGHT
+        ArgumentList = Expression * many(Token.COMMA * Expression)
+        MethodReference = ExpressionName * Token.DOUBLECOLON * option(TypeArguments) * Identifier or
+                ReferenceType * Token.DOUBLECOLON * option(TypeArguments) * Identifier or
+                Primary * Token.DOUBLECOLON * option(TypeArguments) * Identifier or
+                Token.SUPER * Token.DOUBLECOLON * option(TypeArguments) * Identifier or
+                TypeName * Token.DOT * Token.SUPER * Token.DOUBLECOLON * option(TypeArguments) * Identifier or
+                ClassType * Token.DOUBLECOLON * option(TypeArguments) * Token.NEW or
                 ArrayType * Token.DOUBLECOLON * Token.NEW
-        ArrayCreationExpression = Token.NEW * PrimitiveType * DimExprs * Option(Dims) or
-                Token.NEW * ClassOrInterfaceType * DimExprs * Option(Dims) or
+        ArrayCreationExpression = Token.NEW * PrimitiveType * DimExprs * option(Dims) or
+                Token.NEW * ClassOrInterfaceType * DimExprs * option(Dims) or
                 Token.NEW * PrimitiveType * Dims * ArrayInitializer or
                 Token.NEW * ClassOrInterfaceType * Dims * ArrayInitializer
-        DimExprs = Some(DimExpr)
-        DimExpr = Many(Annotation) * Token.BRACKETLEFT * Expression * Token.BRACKETRIGHT
+        DimExprs = some(DimExpr)
+        DimExpr = many(Annotation) * Token.BRACKETLEFT * Expression * Token.BRACKETRIGHT
         Expression = LambdaExpression or AssignmentExpression
         LambdaExpression = LambdaParameters * Token.ARROW * LambdaBody
-        LambdaParameters = Identifier or Token.PARENTHLEFT * Option(FormalParameterList) * Token.PARENTHRIGHT or
+        LambdaParameters = Identifier or Token.PARENTHLEFT * option(FormalParameterList) * Token.PARENTHRIGHT or
                 Token.PARENTHLEFT * InferredFormalParameterList * Token.PARENTHRIGHT
-        InferredFormalParameterList = Identifier * Many(Token.COMMA * Identifier)
+        InferredFormalParameterList = Identifier * many(Token.COMMA * Identifier)
         LambdaBody = Expression or Block
         AssignmentExpression = ConditionalExpression or Assignment
         Assignment = LeftHandSide * AssignmentOperator * Expression
@@ -536,8 +536,8 @@ class GrammarDsl : Grammar() {
         PostIncrementExpression = PostfixExpression * Token.PLUSPLUS
         PostDecrementExpression = PostfixExpression * Token.MINUSMINUS
         CastExpression = Token.PARENTHLEFT * PrimitiveType * Token.PARENTHRIGHT * UnaryExpression or
-                Token.PARENTHLEFT * ReferenceType * Many(AdditionalBound) * Token.PARENTHRIGHT * UnaryExpressionNotPlusMinus or
-                Token.PARENTHLEFT * ReferenceType * Many(AdditionalBound) * Token.PARENTHRIGHT * LambdaExpression
+                Token.PARENTHLEFT * ReferenceType * many(AdditionalBound) * Token.PARENTHRIGHT * UnaryExpressionNotPlusMinus or
+                Token.PARENTHLEFT * ReferenceType * many(AdditionalBound) * Token.PARENTHRIGHT * LambdaExpression
         ConstantExpression = Expression
 
         setStart(CompilationUnit)

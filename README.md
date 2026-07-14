@@ -50,7 +50,7 @@ class AnBnGrammar : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= "a" * Option(S) * "b"
+        S /= "a" * option(S) * "b"
     }
 }
 ```

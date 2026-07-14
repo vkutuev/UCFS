@@ -9,7 +9,7 @@ class LoopDyckGrammar : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= Many("(" * S * ")")
+        S /= many("(" * S * ")")
         // S = [ ( S ) ]*
     }
 }

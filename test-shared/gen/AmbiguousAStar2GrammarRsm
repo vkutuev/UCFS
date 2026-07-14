@@ -1,0 +1,14 @@
+digraph g {
+S_2 [label = "S,S_2", shape = circle, color = black]
+S_1 [label = "S,S_1", shape = doublecircle, color = red]
+S_0 [label = "S,S_0", shape = circle, color = green]
+S_2 -> S_1 [label = "S"]
+S_0 -> S_1 [label = "a"]
+S_0 -> S_2 [label = "S"]
+subgraph cluster_S {
+S_2
+S_1
+S_0
+label = "S"
+}
+}

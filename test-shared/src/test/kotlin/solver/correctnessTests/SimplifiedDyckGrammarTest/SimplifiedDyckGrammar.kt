@@ -9,7 +9,7 @@ class SimplifiedDyckGrammar : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= Option("(" * S * ")")
+        S /= option("(" * S * ")")
         // S =  ( S ) ?
     }
 }

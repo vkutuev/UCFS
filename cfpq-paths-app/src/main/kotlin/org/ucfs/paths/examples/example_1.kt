@@ -3,7 +3,7 @@ package org.ucfs.paths.examples
 import org.ucfs.grammar.combinator.Grammar
 import org.ucfs.grammar.combinator.extension.StringExtension.times
 import org.ucfs.grammar.combinator.regexp.Nt
-import org.ucfs.grammar.combinator.regexp.Option
+import org.ucfs.grammar.combinator.regexp.option
 import org.ucfs.input.DotParser
 import org.ucfs.input.InputGraph
 import org.ucfs.input.TerminalInputLabel
@@ -17,7 +17,7 @@ class AnBnGrammar : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= "a" * Option(S) * "b"
+        S /= "a" * option(S) * "b"
     }
 }
 

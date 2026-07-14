@@ -14,7 +14,7 @@ occurrences of $b$ (e.g., $ab$, $aabb$, $aaabbb$).
 >    val S by Nt().asStart()
 >
 >    init {
->        S /= "a" * Option(S) * "b"
+>        S /= "a" * option(S) * "b"
 >    }
 >}
 >```

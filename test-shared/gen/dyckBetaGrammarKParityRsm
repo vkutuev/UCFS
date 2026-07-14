@@ -1,0 +1,64 @@
+digraph g {
+Si_4 [label = "Si,Si_4", shape = doublecircle, color = red]
+Si_6 [label = "Si,Si_6", shape = circle, color = black]
+S_1 [label = "S,S_1", shape = doublecircle, color = red]
+Sp_3 [label = "Sp,Sp_3", shape = circle, color = black]
+Sp_2 [label = "Sp,Sp_2", shape = circle, color = black]
+Sp_1 [label = "Sp,Sp_1", shape = circle, color = black]
+Sp_0 [label = "Sp,Sp_0", shape = doublecircle, color = green]
+Si_0 [label = "Si,Si_0", shape = circle, color = green]
+Si_2 [label = "Si,Si_2", shape = circle, color = black]
+Si_3 [label = "Si,Si_3", shape = circle, color = black]
+Sp_4 [label = "Sp,Sp_4", shape = doublecircle, color = red]
+Si_5 [label = "Si,Si_5", shape = circle, color = black]
+Sp_6 [label = "Sp,Sp_6", shape = circle, color = black]
+S_0 [label = "S,S_0", shape = circle, color = green]
+Sp_5 [label = "Sp,Sp_5", shape = circle, color = black]
+Si_1 [label = "Si,Si_1", shape = circle, color = black]
+Si_6 -> Si_1 [label = "cb--1"]
+Sp_3 -> Sp_4 [label = "Sp"]
+Sp_2 -> Sp_5 [label = "Si"]
+Sp_2 -> Sp_6 [label = "Sp"]
+Sp_1 -> Sp_4 [label = "Si"]
+Sp_0 -> Sp_1 [label = "op--1"]
+Sp_0 -> Sp_1 [label = "cp--1"]
+Sp_0 -> Sp_2 [label = "ob--1"]
+Sp_0 -> Sp_3 [label = "normal"]
+Si_0 -> Si_1 [label = "op--1"]
+Si_0 -> Si_1 [label = "cp--1"]
+Si_0 -> Si_2 [label = "ob--1"]
+Si_0 -> Si_3 [label = "normal"]
+Si_2 -> Si_5 [label = "Sp"]
+Si_2 -> Si_6 [label = "Si"]
+Si_3 -> Si_4 [label = "Si"]
+Si_5 -> Si_3 [label = "cb--1"]
+Sp_6 -> Sp_3 [label = "cb--1"]
+S_0 -> S_1 [label = "Sp"]
+Sp_5 -> Sp_1 [label = "cb--1"]
+Si_1 -> Si_4 [label = "Sp"]
+subgraph cluster_S {
+S_1
+S_0
+label = "S"
+}
+subgraph cluster_Si {
+Si_4
+Si_6
+Si_0
+Si_2
+Si_3
+Si_5
+Si_1
+label = "Si"
+}
+subgraph cluster_Sp {
+Sp_3
+Sp_2
+Sp_1
+Sp_0
+Sp_4
+Sp_6
+Sp_5
+label = "Sp"
+}
+}

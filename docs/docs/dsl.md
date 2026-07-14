@@ -88,7 +88,7 @@ val B = Term(42)
 | Alternatve    | A \| B                     | A or B                                                                     |
 | Kleene Star   | $A^*$                      | many(A)                                                                    |
 | Kleene Star+  | $A^+$                      | some(A)                                                                    |
-| Optional      | A \| $\varepsilon$ <br> A? | opt(A)                                                                     |
+| Optional      | A \| $\varepsilon$ <br> A? | option(A)                                                                  |
 
 
 Epsilon ($\varepsilon$) - constant terminal with behavior corresponding to the empty string.
@@ -155,7 +155,7 @@ Grammar for this language can be described in various ways.
 ```kotlin 
 class AStar : Grammar() {    
         var A = Term("a")    
-        val S by Nt().asStart(many(A))    
+        val S by Nt(many(A)).asStart()
     }    
 ```
 or 

@@ -11,7 +11,7 @@ class SimplifiedDyck : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= Option("(" * S * ")")
+        S /= option("(" * S * ")")
         // S =  ( S ) ?
     }
 }
@@ -29,7 +29,7 @@ class LoopDyck : Grammar() {
     val S by Nt().asStart()
 
     init {
-        S /= Many("(" * S * ")")
+        S /= many("(" * S * ")")
         // S = [ ( S ) ]*
     }
 }
