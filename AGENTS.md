@@ -81,6 +81,14 @@ graph TD
 3. Only after approval, commit the documentation changes
 4. Then implement the actual code changes
 
+### Documentation update rules
+
+When refactoring public API (e.g., renaming DSL functions), update **all** documentation:
+
+1. **Search scope:** Always search the **entire repository**, not just `docs/docs/`. Include `README.md`, `dev/*.md`, and `docs/docs/*.md` in every grep.
+2. **Verify against source:** After updating docs, cross-check each code snippet against the actual API signature in source code (e.g., confirm `asStart()` takes no arguments by reading `Grammar.kt`).
+3. **Build verification:** Run `./gradlew build` after any change that touches documented API to catch stale examples that no longer compile.
+
 ## Key Source Files
 
 | File | Purpose |
