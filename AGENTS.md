@@ -74,7 +74,19 @@ graph TD
 
 ## Agent Workflow Rules
 
-> **Documentation-first policy:** Any structural or behavioral change must be reflected in the agent documentation *before* implementation.
+### General Workflow
+
+1. **Plan-first policy:** Before making any changes, present a plan of what will be changed and why. Wait for user approval before executing.
+2. **No commits without explicit request:** Never `git commit` or `git push` unless the user explicitly asks. Present diffs for review first.
+3. **Verify before presenting:** Build and tests must pass before showing changes as ready for review.
+4. **Conventional commits:** All commit messages must follow the format from [CONTRIBUTING.md](CONTRIBUTING.md):
+   - Format: `type(scope): short description`
+   - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+   - Example: `chore(build): update JDK toolchain from 11 to 21`
+
+### Documentation-First Policy
+
+> Any structural or behavioral change must be reflected in the agent documentation *before* implementation.
 
 1. Update relevant files in `dev/` (and `AGENTS.md`) to reflect the intended change
 2. **Ask the user to approve the documentation changes**
