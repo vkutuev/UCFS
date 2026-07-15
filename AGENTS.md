@@ -36,7 +36,7 @@ graph TD
 
 - **Tool:** Gradle with Kotlin DSL (`build.gradle.kts`)
 - **Wrapper:** `./gradlew` included, no local Gradle install needed
-- **JDK:** 11+ (toolchain configured in each module)
+- **JDK:** 21+ (toolchain configured in each module)
 - **Kotlin:** 2.4.0
 
 ### Essential Commands

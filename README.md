@@ -3,7 +3,7 @@
 [![CI](https://github.com/FormalLanguageConstrainedPathQuerying/UCFS/actions/workflows/ci-test-infrastructure.yaml/badge.svg)](https://github.com/FormalLanguageConstrainedPathQuerying/UCFS/actions/workflows/ci-test-infrastructure.yaml)
 [![License](https://img.shields.io/github/license/FormalLanguageConstrainedPathQuerying/UCFS)](LICENSE)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.4.0-blue.svg?logo=kotlin)](https://kotlinlang.org)
-[![JDK](https://img.shields.io/badge/JDK-11%2B-orange.svg?logo=openjdk)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+[![JDK](https://img.shields.io/badge/JDK-21%2B-orange.svg?logo=openjdk)](https://www.oracle.com/java/technologies/downloads/#java21)
 
 > Note: project under heavy development!
 
@@ -97,7 +97,7 @@ cfpq-paths-app/    # Runnable demos and tutorial
 
 ### Requirements
 
-- JDK 11+ (toolchain targets 11).
+- JDK 21+ (toolchain targets 21).
 - Gradle Wrapper included (`./gradlew`).
 
 ## Installation

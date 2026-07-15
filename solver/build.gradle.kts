@@ -23,7 +23,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 }
 
-kotlin { jvmToolchain(11) }
+kotlin { jvmToolchain(21) }
 
 tasks.test { 
     useJUnitPlatform() 

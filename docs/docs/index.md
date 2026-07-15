@@ -83,7 +83,7 @@ cfpq-paths-app/    # Runnable demos and tutorial
 
 ### Requirements
 
-- JDK 11+ (toolchain targets 11).
+- JDK 21+ (toolchain targets 21).
 - Gradle Wrapper included (`./gradlew`).
 
 ### Installation:

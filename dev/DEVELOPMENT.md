@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- **JDK 11+** (Gradle toolchain will manage version)
+- **JDK 21+** (Gradle toolchain will manage version)
 - **Git**
 - No local Gradle installation required — use the included wrapper
 
@@ -77,7 +77,7 @@ Or run the main application:
 
 1. Open the project root directory
 2. IntelliJ will detect Gradle project automatically
-3. Ensure JDK 11+ is selected in Project Structure → SDKs
+3. Ensure JDK 21+ is selected in Project Structure → SDKs
 
 ## Writing Tests
 
